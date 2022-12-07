@@ -1,6 +1,6 @@
 import React from 'react'
 import eyecuelogo from "../../images/b-eyecuelogo.png"
-import { Nav, Navbar, } from 'react-bootstrap'
+import { Button, Nav, Navbar, } from 'react-bootstrap'
 
 const headerLinks = [
     {
@@ -27,12 +27,13 @@ export default function Header() {
         <Navbar bg="light" expand="lg" className='p-2'>
             <Navbar.Brand href="#home" className='m-3'><img src={eyecuelogo} alt="EyeCueLab" className='me-4' width="57px" height="57px" /></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
+            <Navbar.Collapse id="basic-navbar-nav" className='row'>
                 <Nav className="me-auto">
                     {headerLinks.map((nav, idx) => {
                         const navBarKey = `navbar_${idx}`
                         return <Nav.Link href={`${nav.href}`} key={navBarKey} className="me-4">{nav.title}</Nav.Link>
                     })}
+                    <Nav className="ms-auto me-3"><Button variant="outline-secondary" className="btn ps-5 pe-5 rounded-0">Contact Us</Button></Nav>
                 </Nav>
             </Navbar.Collapse>
         </Navbar >
