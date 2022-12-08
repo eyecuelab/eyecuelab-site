@@ -1,7 +1,4 @@
 // test
-$theme-colors: (
-    "info": tomato,
-    "danger": teal
-);
-    
+$navbar-light-toggler-icon-bg: url(../images/navbar-toggler.png);
+$navbar-dark-toggler-icon-bg: url(../images/navbar-toggler.png);
 @import "~bootstrap/scss/bootstrap";
