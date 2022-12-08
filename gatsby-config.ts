@@ -23,7 +23,8 @@ const config: GatsbyConfig = {
         precision: 6,
       },
     },
-  }
+  },
+    `gatsby-plugin-styled-components`
   ]
 }
 
