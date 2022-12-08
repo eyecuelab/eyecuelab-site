@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import eyecuelogo from "../../../images/w-eyecuelogo.png";
 import { Button, Nav, Navbar, } from 'react-bootstrap';
+import cn from "classnames";
+import styled from "styled-components"
+import { Eyecuenav, } from './styles';
 
 const headerLinks = [
     {
@@ -19,23 +22,34 @@ const headerLinks = [
         title: "Innovation Assessment",
         href: "Innovation Assessment"
     },
-
 ]
 
 export default function Header() {
+    const [navToggle, setNavToggle] = useState(false);
+  
     return (
-        <Navbar expand="lg" bg='dark' className='p-2'>
+        <Eyecuenav expand='lg' sticky='top' className=' border-bottom d-flex align-items-center justify-content-between' onToggle={(a) => setNavToggle(a)}>
             <Navbar.Brand href="#home" className='m-3'><img src={eyecuelogo} alt="EyeCueLab" className='me-4' width="57px" height="57px" /></Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-            <Navbar.Collapse id="basic-navbar-nav" className='row'>
-                <Nav className="me-auto">
+            {navToggle ? null : <Nav className="m-3"><Button variant="outline-light" className="rounded-0">Contact Us</Button></Nav>}
+            <Navbar.Toggle className="m-3 border border-danger" onClick={(a) => console.log(a)} />
+            <Navbar.Collapse>
+                <Nav className={cn("me-auto", {
+                    "d-flex align-items-start mt-4": navToggle
+                })}>
                     {headerLinks.map((nav, idx) => {
-                        const navBarKey = `navbar_${idx}`
-                        return <Nav.Link href={`${nav.href}`} key={navBarKey} className="ms-4 text-white">{nav.title}</Nav.Link>
+                        const navBarKey = `navbar_${idx}`;
+                        return <Nav.Link href={`${nav.href}`} key={navBarKey} className={cn("ms-3 text-white navLinks", {
+                            "mb-2": navToggle
+                        })}>{nav.title}</Nav.Link>
                     })}
-                    <Nav className="ms-auto me-3"><Button variant="outline-light" className="ps-5 pe-5 rounded-0">Contact Us</Button></Nav>
+                    {navToggle ? <Nav className="m-3"><Button variant="outline-light" className="rounded-0">Contact Us</Button></Nav> : null}
                 </Nav>
             </Navbar.Collapse>
-        </Navbar >
-    )
+        </Eyecuenav>
+    );
 }
+
+
+// problem
+// contact us should be in the middle of the screen when nav bar is not collapsed
+// when collapsed contact us should be in the options 
