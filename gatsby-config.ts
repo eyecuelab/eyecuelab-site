@@ -11,9 +11,20 @@ const config: GatsbyConfig = {
   plugins: [{
     resolve: 'gatsby-plugin-manifest',
     options: {
-      "icon": "src/images/eyecuelogo.png"
+      "icon": "src/images/b-eyecuelogo.png"
     }
-  }],
+  },
+
+  {
+    resolve: `gatsby-plugin-sass`,
+    options: {
+      implementation: require("sass"),
+      sassOptions: {
+        precision: 6,
+      },
+    },
+  }
+  ]
 }
 
 export default config
