@@ -6,10 +6,9 @@ import "../scss/main.scss";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <div className="eyecue-body">
-      <Header />
-      <HomePage />
-    </div>
+    <>
+      <HomePage  />
+    </>
   )
 }
 

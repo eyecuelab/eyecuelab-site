@@ -3,7 +3,7 @@ import eyecuelogo from "../../../images/w-eyecuelogo.png";
 import { Button, Nav, Navbar, } from 'react-bootstrap';
 import cn from "classnames";
 import styled from "styled-components"
-import { Eyecuenav, } from './styles';
+import { EyeCueNavBar, } from './styles';
 
 const headerLinks = [
     {
@@ -26,12 +26,12 @@ const headerLinks = [
 
 export default function Header() {
     const [navToggle, setNavToggle] = useState(false);
-  
+
     return (
-        <Eyecuenav expand='lg' sticky='top' className=' border-bottom d-flex align-items-center justify-content-between' onToggle={(a) => setNavToggle(a)}>
+        <EyeCueNavBar toggled={navToggle} expand='lg' sticky='top' className='d-flex align-items-center justify-content-between' onToggle={(a) => setNavToggle(a)} >
             <Navbar.Brand href="#home" className='m-3'><img src={eyecuelogo} alt="EyeCueLab" className='me-4' width="57px" height="57px" /></Navbar.Brand>
             {navToggle ? null : <Nav className="m-3"><Button variant="outline-light" className="rounded-0">Contact Us</Button></Nav>}
-            <Navbar.Toggle className="m-3 border border-danger" onClick={(a) => console.log(a)} />
+            <Navbar.Toggle className="m-3" onClick={(a) => console.log(a)} />
             <Navbar.Collapse>
                 <Nav className={cn("me-auto", {
                     "d-flex align-items-start mt-4": navToggle
@@ -45,11 +45,6 @@ export default function Header() {
                     {navToggle ? <Nav className="m-3"><Button variant="outline-light" className="rounded-0">Contact Us</Button></Nav> : null}
                 </Nav>
             </Navbar.Collapse>
-        </Eyecuenav>
+        </EyeCueNavBar>
     );
 }
-
-
-// problem
-// contact us should be in the middle of the screen when nav bar is not collapsed
-// when collapsed contact us should be in the options 

@@ -4,4 +4,9 @@ $navbar-light-toggler-icon-bg: url(../images/navbar-toggler.png);
 $navbar-dark-toggler-icon-bg: url(../images/navbar-toggler.png);
 $font-family-base: "proxima-regular";
 
+.eyecue-body{
+    background: url(../images/Video.png);
+    height: 100vh;
+}
+
 @import "~bootstrap/scss/bootstrap";
