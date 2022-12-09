@@ -11,7 +11,7 @@ const config: GatsbyConfig = {
   plugins: [{
     resolve: 'gatsby-plugin-manifest',
     options: {
-      "icon": "src/images/b-eyecuelogo.png"
+      "icon": "./src/images/b-eyecuelogo.png"
     }
   },
 
@@ -24,7 +24,8 @@ const config: GatsbyConfig = {
       },
     },
   },
-    `gatsby-plugin-styled-components`
+    `gatsby-plugin-styled-components`,
+    'gatsby-plugin-postcss'
   ]
 }
 
