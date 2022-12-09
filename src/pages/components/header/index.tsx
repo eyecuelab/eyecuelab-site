@@ -8,12 +8,11 @@ import cn from "classnames"
 export default function Header() {
     const [nav, setNav] = useState(false)
     const handleClick = () => setNav(!nav)
-
     const handleClose = () => setNav(!nav)
 
     return (
-         <>
-            <div className={cn('grid grid-cols-3 md:grid-cols-12 sticky', {
+        <>
+            <div className={cn('grid grid-cols-3 md:grid-cols-12 sticky w-screen', {
                 "bg-nav-blue drop-shadow-none": nav,
                 "bg-transparent": !nav
             })}>
@@ -45,8 +44,7 @@ export default function Header() {
                 <ul className={!nav ? "hidden" : 'md:hidden absolute bg-gradient-to-t from-nav-light-blue to-nav-blue w-screen h-screen p-3 flex flex-col justify-start'}>
                     {headerLinks.map((nav, idx) => {
                         const navKey = `${idx}_navKey`;
-                        const isContact = nav.title === "Contact Us";
-                        return <li className={isContact ? "mt-36 text-white text-center hover:shadow-md font-semibold py-2 px-4 border border-white-400 shadow" : "text-white mt-11 first:mt-32 text-2xl"} onClick={handleClose} key={navKey}>{nav.title}</li>
+                        return <li className="last:mt-36 text-white last:text-center font-semibold last:py-2 last:px-4 last:border last:border-white-400 mt-11 first:mt-32 text-2xl" onClick={handleClose} key={navKey}>{nav.title}</li>
                     })}
                 </ul>
             </div>
