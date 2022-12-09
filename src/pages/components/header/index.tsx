@@ -41,10 +41,10 @@ export default function Header() {
                 </span>
             </div>
             <div>
-                <ul className={!nav ? "hidden" : 'lg:hidden absolute bg-gradient-to-t from-nav-light-blue to-nav-blue w-screen h-screen p-3 flex flex-col justify-start'}>
+                <ul className={!nav ? "hidden" : 'lg:hidden absolute bg-gradient-to-t from-nav-light-blue to-nav-blue w-screen h-screen z-10 p-3 flex flex-col justify-start'}>
                     {headerLinks.map((nav, idx) => {
                         const navKey = `${idx}_navKey`;
-                        return <li className="last:mt-36 text-white last:text-center font-semibold last:py-2 last:px-4 last:border last:border-white-400 mt-11 first:mt-32 text-2xl" onClick={handleClose} key={navKey}>{nav.title}</li>
+                        return <li className="last:mt-60 text-white last:text-center font-semibold last:py-2 last:px-4 last:border last:border-white-400 mt-11 first:mt-32 text-2xl" onClick={handleClose} key={navKey}>{nav.title}</li>
                     })}
                 </ul>
             </div>
