@@ -18,6 +18,16 @@ module.exports = {
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
     },
+    extend:{
+      fontFamily:{
+        'proxima': ['proxima-regular']
+      },
+      colors:{
+        'nav-blue': '#5403FF',
+        'nav-light-blue': '#31DAFF'
+      }
+    }
+    
   },
   plugins: [],
 };

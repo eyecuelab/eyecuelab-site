@@ -6,7 +6,7 @@ import Header from "./components/header";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <div className="w-full h-full flex">
+    <div className="w-full h-full flex-col font-proxima">
       <Header />
       <HomePage />
     </div>
