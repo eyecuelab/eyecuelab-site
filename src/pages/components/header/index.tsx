@@ -1,55 +1,46 @@
 import React, { useState } from 'react';
-import eyecuelogo from "../../../images/w-eyecuelogo.png";
-import { Button, Nav, Navbar, } from 'react-bootstrap';
-import cn from "classnames";
-import styled from "styled-components"
-import { Eyecuenav, } from './styles';
-
-const headerLinks = [
-    {
-        title: "Who We Are",
-        href: "Who We Are"
-    },
-    {
-        title: "Case Studies",
-        href: "Case Studies"
-    },
-    {
-        title: "What We Do",
-        href: "What We Do"
-    },
-    {
-        title: "Innovation Assessment",
-        href: "Innovation Assessment"
-    },
-]
+import { Link, animateScroll as scroll, } from 'react-scroll'
+import { MenuAlt4Icon, XIcon } from '@heroicons/react/outline';
+import logo from "../../../images/w-eyecuelogo.png";
+import headerLinks from './headerLinks';
+import cn from "classnames"
 
 export default function Header() {
-    const [navToggle, setNavToggle] = useState(false);
-  
+    const [nav, setNav] = useState(false)
+    const handleClick = () => setNav(!nav)
+
+    const handleClose = () => setNav(!nav)
+    console.log(nav)
     return (
-        <Eyecuenav expand='lg' sticky='top' className=' border-bottom d-flex align-items-center justify-content-between' onToggle={(a) => setNavToggle(a)}>
-            <Navbar.Brand href="#home" className='m-3'><img src={eyecuelogo} alt="EyeCueLab" className='me-4' width="57px" height="57px" /></Navbar.Brand>
-            {navToggle ? null : <Nav className="m-3"><Button variant="outline-light" className="rounded-0">Contact Us</Button></Nav>}
-            <Navbar.Toggle className="m-3 border border-danger" onClick={(a) => console.log(a)} />
-            <Navbar.Collapse>
-                <Nav className={cn("me-auto", {
-                    "d-flex align-items-start mt-4": navToggle
-                })}>
+        <div className=''>
+            <div className={cn('w-screen h-[105px] z-10 md:bg-transparent bg-zinc-900 drop-shadow-lg', {
+                "bg-teal-600 drop-shadow-none": nav,
+            })}>
+                <div className='px-2 flex justify-between items-center w-full h-full'>
+                    <div className='flex items-center'>
+                        <img src={logo} alt="EyeCueLab" className="h-[57px] w-[57px] m-4" />
+                    </div>
+                    <div className={nav ? "hidden" : "md:hidden" }>
+                        <button className="bg-transparent text-white hover:shadow-md font-semibold py-2 px-4 border border-gray-400 shadow">
+                            Contact Us
+                        </button>
+                    </div>
+                    <div className='md:hidden mr-3 text-white' onClick={handleClick}>
+                        {!nav ? <MenuAlt4Icon className='w-5 hover:scale-95' /> : <XIcon className='w-5 hover:scale-95' />}
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <ul className={!nav ? "hidden" : 'md:hidden absolute bg-teal-600 w-full h-full px-8'}>
                     {headerLinks.map((nav, idx) => {
-                        const navBarKey = `navbar_${idx}`;
-                        return <Nav.Link href={`${nav.href}`} key={navBarKey} className={cn("ms-3 text-white navLinks", {
-                            "mb-2": navToggle
-                        })}>{nav.title}</Nav.Link>
+                        const navKey = `${idx}_navKey`;
+                        const isContact = nav.title === "Contact Us";
+                        return <li className={isContact ? "mt-12 text-white text-center hover:shadow-md font-semibold py-2 px-4 border border-white-400 shadow" : "text-white mt-12"} onClick={handleClose} key={navKey}>{nav.title}</li>
                     })}
-                    {navToggle ? <Nav className="m-3"><Button variant="outline-light" className="rounded-0">Contact Us</Button></Nav> : null}
-                </Nav>
-            </Navbar.Collapse>
-        </Eyecuenav>
+                </ul>
+
+            </div>
+        </div>
     );
 }
-
-
-// problem
-// contact us should be in the middle of the screen when nav bar is not collapsed
-// when collapsed contact us should be in the options 

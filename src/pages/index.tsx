@@ -1,16 +1,16 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
-import Header from "./components/header"
 import HomePage from "./components/homepage";
-import "../scss/main.scss";
+import "../styles/sass/main.scss";
+import Header from "./components/header";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <div className="eyecue-body">
+    <div className="w-full h-full flex">
       <Header />
       <HomePage />
     </div>
-  )
+  );
 }
 
 export default IndexPage
