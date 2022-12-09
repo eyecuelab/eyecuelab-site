@@ -19,11 +19,11 @@ export default function Header() {
                 <span className='p-3 flex justify-items-center'>
                     <img src={logo} alt="EyeCueLab" />
                 </span>
-                <ul className='hidden lg:col-span-11 lg:grid lg:grid-cols-11 lg:items-center lg:text-white lg:whitespace-nowrap'>
+                <ul className='hidden lg:col-span-11 lg:grid lg:grid-cols-8 lg:items-center lg:text-white lg:whitespace-nowrap lg:pl-10'>
                     {headerLinks.map((nav, idx) => {
                         const navKey = `${idx}_navKey`;
                         return (
-                            <li className="last:col-start-10 last:col-end-11 last:flex last:justify-center last:items-center last:w-56 last:h-10 last:border" onClick={handleClose} key={navKey}>
+                            <li className="last:col-start-8 last:col-end-8 last:flex last:justify-center last:items-center last:w-48 last:h-10 last:border last:pl-3" onClick={handleClose} key={navKey}>
                                 <p className=''>
                                     {nav.title}
                                 </p>
