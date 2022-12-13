@@ -13,12 +13,12 @@ export default function Header() {
   return (
     <>
       <div
-        className={cn("fixed top-0 z-10 h-28 w-full text-white text-md ", {
+        className={cn("fixed top-0 z-10 h-28 w-full text-white text-xl ", {
           "bg-transparent": !nav,
           hidden: nav,
         })}
       >
-        <div className="container mx-auto h-full md:grid md:grid-cols-12 flex justify-between items-center py-8 px-5">
+        <div className="h-full md:grid md:grid-cols-12 flex justify-between items-center py-8 px-5">
           <div className="col-start-1 col-end-2 flex items-center justify-start">
             <span className="">
               <img src={logo} alt="EyeCueLab" />
@@ -30,7 +30,7 @@ export default function Header() {
                 const navKey = `${idx}_navKey`;
                 return (
                   <li
-                    className="flex justify-start last:justify-center items-center first:ml-0 ml-2 last:col-start-6  last:border last:h-12 last:ml-14 whitespace-nowrap"
+                    className="flex justify-start last:justify-center items-center ml-2 last:col-start-6  last:border last:h-10 last:ml-14 whitespace-nowrap"
                     onClick={handleClose}
                     key={navKey}
                   >
