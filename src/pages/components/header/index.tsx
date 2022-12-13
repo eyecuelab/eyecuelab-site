@@ -25,12 +25,12 @@ export default function Header() {
             </span>
           </div>
           <div className="hidden col-start-2 col-end-13 md:flex items-center ">
-            <ul className="grid grid-cols-6 w-full">
+            <ul className="grid grid-cols-6 w-full pr-3">
               {headerLinks.map((nav, idx) => {
                 const navKey = `${idx}_navKey`;
                 return (
                   <li
-                    className="flex justify-start last:justify-center items-center ml-2 last:col-start-6  last:border last:h-10 last:ml-14 whitespace-nowrap"
+                    className="flex justify-start last:justify-center items-center ml-2 last:col-start-6  last:border last:h-10 whitespace-nowrap"
                     onClick={handleClose}
                     key={navKey}
                   >
