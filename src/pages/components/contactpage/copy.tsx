@@ -1,0 +1,1 @@
+export const talkCopy = 'Our goal is to help your team activate your innovation potential, and build solutions that we are all excited about.'
