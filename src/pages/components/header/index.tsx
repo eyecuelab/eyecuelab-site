@@ -13,9 +13,9 @@ export default function Header() {
   return (
     <>
       <div
-        className={cn("fixed top-0 z-10 h-28 w-full text-white text-xl ", {
+        className={cn("fixed top-0 z-10 h-28 w-full text-white text-xl", {
           "bg-transparent": !nav,
-          hidden: nav,
+          "hidden": nav,
         })}
       >
         <div className="h-full md:grid md:grid-cols-12 flex justify-between items-center py-8 px-5">
@@ -54,7 +54,7 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <div className={nav ? "absolute bg-gradient-to-t from-nav-light-blue to-nav-blue w-full h-full z-50" : "hidden"}>
+      <div className={nav ? "absolute bg-gradient-to-tl from-nav-light-blue to-nav-blue w-full h-full z-50" : "hidden"}>
         <div className="h-24 w-full container py-8 px-5">
           <div className="flex justify-between">
             <span className="">
