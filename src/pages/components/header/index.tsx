@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link, animateScroll as scroll, } from 'react-scroll'
-import { MenuAlt4Icon, XIcon } from '@heroicons/react/outline';
+import { Link } from "gatsby"
+import { MenuAlt3Icon, XIcon } from '@heroicons/react/outline';
 import logo from "../../../images/w-eyecuelogo.png";
 import headerLinks from './headerLinks';
 import cn from "classnames"
@@ -12,41 +12,63 @@ export default function Header() {
 
     return (
         <>
-            <div className={cn('grid grid-cols-3 lg:grid-cols-12 sticky w-screen', {
-                "bg-nav-blue drop-shadow-none": nav,
-                "bg-transparent": !nav
-            })}>
-                <span className='p-3 flex justify-items-center'>
-                    <img src={logo} alt="EyeCueLab" />
-                </span>
-                <ul className='hidden lg:col-span-11 lg:grid lg:grid-cols-8 lg:items-center lg:text-white lg:whitespace-nowrap lg:pl-10'>
-                    {headerLinks.map((nav, idx) => {
-                        const navKey = `${idx}_navKey`;
-                        return (
-                            <li className="last:col-start-8 last:col-end-8 last:flex last:justify-center last:items-center last:w-48 last:h-10 last:border last:pl-3" onClick={handleClose} key={navKey}>
-                                <p className=''>
-                                    {nav.title}
-                                </p>
-                            </li>
-                        )
-                    })}
-                </ul>
-                <button className="lg:hidden text-white px-6 py-2 whitespace-nowrap flex justify-center items-center">
-                    <p className={nav ? 'hidden' : 'border px-6 py-2'}>
-                        Contact Us
-                    </p>
-                </button>
-                <span className='lg:hidden text-white flex justify-end items-center pr-3' onClick={handleClick}>
-                    {!nav ? <MenuAlt4Icon className='w-5 hover:scale-95' /> : <XIcon className='w-5 hover:scale-95' />}
-                </span>
+            <div className={cn('fixed top-0 z-10 h-28 w-full text-white text-xl ', {
+                "bg-transparent": !nav,
+                "hidden": nav
+            })} >
+                <div className='container mx-auto h-full lg:grid lg:grid-cols-12 flex justify-between items-center p-3'>
+                    <div className='col-start-1 col-end-2 flex items-center justify-start'>
+                        <span className=''>
+                            <img src={logo} alt="EyeCueLab" />
+                        </span>
+                    </div>
+                    <div className='hidden col-start-2 col-end-13 lg:flex items-center '>
+                        <ul className='grid grid-cols-6 w-full'>
+                            {headerLinks.map((nav, idx) => {
+                                const navKey = `${idx}_navKey`;
+                                return (
+                                    <li className="flex justify-start last:justify-center items-center first:ml-0 ml-2 last:col-start-6  last:border last:h-12 last:ml-14 whitespace-nowrap" onClick={handleClose} key={navKey}>
+                                        <Link className='' to={nav.href}>
+                                            {nav.title}
+                                        </Link>
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    </div>
+                    <div className=''>
+                        <button className="lg:hidden text-white px-6 py-2 whitespace-nowrap flex justify-center items-center">
+                            <p className={nav ? 'hidden' : 'border px-6 py-2'}>
+                                Contact Us
+                            </p>
+                        </button>
+                    </div>
+                    <div className=''>
+                        <span className='lg:hidden text-white flex justify-end items-center' onClick={handleClick}>
+                            {!nav ? <MenuAlt3Icon className='w-5 hover:scale-95' /> : <XIcon className='w-5 hover:scale-95' />}
+                        </span>
+                    </div>
+                </div>
             </div>
-            <div>
-                <ul className={!nav ? "hidden" : 'lg:hidden absolute bg-gradient-to-t from-nav-light-blue to-nav-blue w-screen h-screen z-10 p-3 flex flex-col justify-start'}>
-                    {headerLinks.map((nav, idx) => {
-                        const navKey = `${idx}_navKey`;
-                        return <li className="last:mt-60 text-white last:text-center font-semibold last:py-2 last:px-4 last:border last:border-white-400 mt-11 first:mt-32 text-2xl" onClick={handleClose} key={navKey}>{nav.title}</li>
-                    })}
-                </ul>
+            <div className={nav ? "absolute bg-gradient-to-t from-nav-light-blue to-nav-blue w-full h-full z-50" : "hidden"}>
+                <div className='h-24 w-full p-3 container pt-4'>
+                    <div className='flex justify-between'>
+                        <span className=''>
+                            <img src={logo} alt="EyeCueLab" />
+                        </span>
+                        <span className='lg:hidden text-white flex justify-end items-center' onClick={handleClick}>
+                            {!nav ? <MenuAlt3Icon className='w-5 hover:scale-95' /> : <XIcon className='w-5 hover:scale-95' />}
+                        </span>
+                    </div>
+                    <div className='w-full h-full flex flex-col'>
+                        <ul className={!nav ? "hidden" : 'lg:hidden p-3 flex flex-col justify-start'}>
+                            {headerLinks.map((nav, idx) => {
+                                const navKey = `${idx}_navKey`;
+                                return <li className="last:mt-60 text-white last:text-center font-semibold last:py-2 last:px-4 last:border last:border-white-400 mt-11 first:mt-32 text-2xl" onClick={handleClose} key={navKey}>{nav.title}</li>
+                            })}
+                        </ul>
+                    </div>
+                </div>
             </div>
         </>
     );
