@@ -1,5 +1,5 @@
-import * as React from "react"
-import type { HeadFC, PageProps } from "gatsby"
+import * as React from "react";
+import type { HeadFC, PageProps } from "gatsby";
 import "../styles/sass/main.scss";
 import hex from "../images/Icon.png";
 import hex1 from "../images/Icon (1).png";
@@ -7,11 +7,11 @@ import Header from "./components/header";
 import { screenSize } from "../utilities/screenSize";
 import RelativeFullScreen from "./components/relativeLayout";
 import { PlusIcon } from "@heroicons/react/outline";
-
+import line from "../images/Vector 15 (2).png";
 const IndexPage: React.FC<PageProps> = () => {
   const windowWidth = screenSize().winWidth;
 
-  console.log(windowWidth)
+  console.log(windowWidth);
   return (
     <div className="font-proxima bg-zinc-800 w-screen h-screen overflow-x-hidden">
       <Header />
@@ -26,31 +26,40 @@ const IndexPage: React.FC<PageProps> = () => {
             <img src={windowWidth < 768 ? hex : hex1} alt="hex" />
           </div>
           <div className="absolute z-20 left-0 bottom-72 h-72 w-[90vw] flex flex-col md:flex-row justify-between">
-            <div className="w-[40vw] flex justify-end items-center text-white text-9xl font-proxima font-semibolds" >Who Is <br />EyeCue Lab</div>
-            <div className="w-[40vw] flex justify-start items-center text-white text-4xl font-proxima font-thin leading-relaxed" >Our goal is to help your team activate your innovation potential, and build solutions that we're all excited about.</div>
+            <div className="w-[40vw] flex justify-end items-center text-white text-8xl font-proxima font-semibolds">
+              Who Is <br />
+              EyeCue Lab
+            </div>
+            <div className="w-[40vw] flex justify-start items-center text-white text-3xl font-proxima font-thin leading-relaxed">
+              Our goal is to help your team activate your innovation potential, and build solutions that we're all excited about.
+            </div>
           </div>
           <div className="bg-white absolute right-0 md:left-0 bottom-0 h-28 w-[62vw] md:w-[72vw] z-20 flex justify-center md:justify-end md:pr-32 items-center">
-            <PlusIcon className="h-7 w-7 text-blue-400 mr-5" /><p className="text-xl">Who We Are</p> 
+            <PlusIcon className="h-7 w-7 text-blue-400 mr-5" />
+            <p className="text-xl">Who We Are</p>
           </div>
         </div>
       </RelativeFullScreen>
-      <RelativeFullScreen classNames="bg-white border border-purple-600" >
-        <div className="h-full border-orange-700 grid grid-cols-3">
+      <RelativeFullScreen classNames="bg-white border border-purple-600">
+        <div className={`h-full -z-10 border border-orange-700`}>
+          <img src={line} alt="line" className="w-screen absolute bottom-14" />
+        </div>
+        <div className="absolute top-0 w-full h-full z-20 border-orange-700 grid grid-cols-3">
           <div className="border border-green-400" />
           <div className="border border-green-400" />
           <div className="border border-green-400" />
         </div>
-        </RelativeFullScreen>
+      </RelativeFullScreen>
     </div>
   );
-}
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const Head: HeadFC = () => {
   return (
     <>
       <title>EyeCueLab</title>
     </>
-  )
-}
+  );
+};
