@@ -30,7 +30,7 @@ export default function Header() {
                 const navKey = `${idx}_navKey`;
                 return (
                   <li
-                    className="flex justify-start last:justify-center items-center ml-2 last:col-start-6  last:border last:h-10 whitespace-nowrap"
+                    className="flex justify-start last:justify-center items-center ml-2 last:col-start-6  last:border last:border-white last:h-10 whitespace-nowrap"
                     onClick={handleClose}
                     key={navKey}
                   >
