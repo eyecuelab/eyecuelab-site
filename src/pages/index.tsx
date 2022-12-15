@@ -40,14 +40,41 @@ const IndexPage: React.FC<PageProps> = () => {
           </div>
         </div>
       </RelativeFullScreen>
-      <RelativeFullScreen classNames="bg-white border border-purple-600">
-        <div className={`h-full -z-10 border border-orange-700`}>
-          <img src={line} alt="line" className="w-screen absolute bottom-14" />
+      <RelativeFullScreen classNames="bg-white">
+        <div className={`h-full -z-10`}>
+          <img src={line} alt="line" className="w-screen absolute top-4" />
         </div>
-        <div className="absolute top-0 w-full h-full z-20 border-orange-700 grid grid-cols-3">
-          <div className="border border-green-400" />
-          <div className="border border-green-400" />
-          <div className="border border-green-400" />
+        <div className="absolute top-0 w-full h-full z-20 grid grid-cols-3">
+          <div className="flex flex-col justify-start items-end">
+            <div className="border border-red-600 w-full h-1/3">hi</div>
+            <div className="h-1/3 w-1/2 flex flex-col justify-center items-start">
+              <h3 className="text-4xl">Precision</h3>
+              <br />
+              <p className="">You bring the vision, we'll help you successfully take it to market through our proven approach.</p>
+            </div>
+          </div>
+
+          <div className="flex flex-col justify-center">
+            <div className="border border-red-600 w-full h-1/3">hi</div>
+            <div className="h-1/3 flex justify-center items-center">
+              <div className="w-1/2 flex flex-col justify-end items-start">
+                <h3 className="text-4xl">Innovation</h3>
+                <br />
+                <p className="">We've been in business for over 10-years, but still bring a fresh "startup velocity" to all our partners' projects.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col justify-end">
+            <div className="border border-red-600 w-full h-1/3">hi</div>
+            <div className="h-1/3 flex justify-start items-center">
+              <div className="w-1/2 flex flex-col justify-end items-start">
+                <h3 className="text-4xl">Vision</h3>
+                <br />
+                <p className="">We don't just sit back and take work orders like most agencies. We actively brainstorm and iterate alongside your team.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </RelativeFullScreen>
     </div>
