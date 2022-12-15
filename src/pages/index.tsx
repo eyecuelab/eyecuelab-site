@@ -4,16 +4,23 @@ import type { HeadFC, PageProps } from "gatsby"
 import HomePage from "./homepage";
 import "../styles/sass/main.scss";
 import Header from "./components/header";
-import ContactPage from "./components/contactpage";
+import ContactPage from "./contactpage";
+import WhoWeArePage from "./wearepage";
+import WhoWeHelpPage from "./whowehelppage";
 import "../styles/sass/main.scss";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <div className="font-proxima bg-zinc-800 w-screen h-screen">
-      <Header />
-      <HomePage />
-      <ContactPage />
-      <div className="relative bg-nav-blue h-full " />
+    // bg-zinc-800
+    // font-proxima
+    <div className="w-screen h-screen">
+    {/* <div> */}
+      {/* <Header /> */}
+      {/* <HomePage /> */}
+      {/* <ContactPage /> */}
+      <WhoWeHelpPage />
+      {/* <WhoWeArePage /> */}
+      {/* <div className="relative bg-nav-blue h-full " /> */}
     </div>
   );
 }

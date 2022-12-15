@@ -4,10 +4,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'nav-blue': '#5403FF',
+        'nav-light-blue': '#31DAFF',
         'primary-blue': '#0176FF',
         'primary-blue-light': '#0076FF',
         'darker-blue': '#0257FE',
+        'lighter-grey': '#F5F9FB',
         'light-grey': '#E0E9ED'
+      },
+      fontFamily:{
+        'proxima': ['proxima-regular']
       },
     },
     maxWidth: {
@@ -25,16 +31,6 @@ module.exports = {
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
     },
-    extend:{
-      fontFamily:{
-        'proxima': ['proxima-regular']
-      },
-      colors:{
-        'nav-blue': '#5403FF',
-        'nav-light-blue': '#31DAFF'
-      }
-    }
-    
   },
   plugins: [],
 };
