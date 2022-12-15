@@ -1,13 +1,17 @@
 import * as React from "react";
+import Header from "./components/header";
+import RelativeFullScreen from "./components/relativeLayout";
 import type { HeadFC, PageProps } from "gatsby";
-import "../styles/sass/main.scss";
 import hex from "../images/Icon.png";
 import hex1 from "../images/Icon (1).png";
-import Header from "./components/header";
-import { screenSize } from "../utilities/screenSize";
-import RelativeFullScreen from "./components/relativeLayout";
-import { PlusIcon } from "@heroicons/react/outline";
 import line from "../images/Vector 15 (2).png";
+import middleShape from "../images/Group 135.png";
+import thirdShape from "../images/Group 136.png";
+import firstShape from "../images/Polygon 2.png";
+import "../styles/sass/main.scss";
+import { screenSize } from "../utilities/screenSize";
+import { PlusIcon } from "@heroicons/react/outline";
+
 const IndexPage: React.FC<PageProps> = () => {
   const windowWidth = screenSize().winWidth;
 
@@ -46,16 +50,23 @@ const IndexPage: React.FC<PageProps> = () => {
         </div>
         <div className="absolute top-0 w-full h-full z-20 grid grid-cols-3">
           <div className="flex flex-col justify-start items-end">
-            <div className="border border-red-600 w-full h-1/3">hi</div>
+            <div className="w-full flex justify-start pl-7 pt-5">
+              <div className="w-2/3 flex justify-center items-center h-full">
+                <img src={firstShape} alt="shape" />
+              </div>
+            </div>
             <div className="h-1/3 w-1/2 flex flex-col justify-center items-start">
               <h3 className="text-4xl">Precision</h3>
               <br />
               <p className="">You bring the vision, we'll help you successfully take it to market through our proven approach.</p>
             </div>
           </div>
-
           <div className="flex flex-col justify-center">
-            <div className="border border-red-600 w-full h-1/3">hi</div>
+            <div className="w-full flex justify-start pl-2 pt-5">
+              <div className="w-2/3 flex justify-center items-center h-full">
+                <img src={middleShape} alt="shape" />
+              </div>
+            </div>
             <div className="h-1/3 flex justify-center items-center">
               <div className="w-1/2 flex flex-col justify-end items-start">
                 <h3 className="text-4xl">Innovation</h3>
@@ -64,9 +75,12 @@ const IndexPage: React.FC<PageProps> = () => {
               </div>
             </div>
           </div>
-
           <div className="flex flex-col justify-end">
-            <div className="border border-red-600 w-full h-1/3">hi</div>
+            <div className="w-full flex justify-start mt-9">
+              <div className="w-2/3 flex justify-center items-end">
+                <img src={thirdShape} alt="shape" />
+              </div>
+            </div>
             <div className="h-1/3 flex justify-start items-center">
               <div className="w-1/2 flex flex-col justify-end items-start">
                 <h3 className="text-4xl">Vision</h3>
