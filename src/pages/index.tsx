@@ -25,16 +25,16 @@ const IndexPage: React.FC<PageProps> = () => {
 
   console.log(windowWidth);
   return (
-    <div className="font-proxima bg-zinc-800 w-screen h-screen overflow-x-hidden">
+    <div className="font-proxima bg-zinc-800 w-screen h-screen overflow-x-hidden snap-y">
       <Header />
 
-      <RelativeFullScreen classNames="text-5xl text-white leading-relaxed eyecuebody">
+      <RelativeFullScreen classNames="text-5xl text-white leading-relaxed eyecuebody snap-start">
         <h3 className="absolute w-full bottom-36 left-0 px-4 md:px-0 md:left-44 md:bottom-36 md:w-1/2">
           Your Team for Truly Innovative <span className="font-bold">Software Design + Development</span>
         </h3>
       </RelativeFullScreen>
 
-      <RelativeFullScreen classNames="bg-gradient-to-tl from-nav-light-blue to-nav-blue">
+      <RelativeFullScreen classNames="bg-gradient-to-tl from-nav-light-blue to-nav-blue snap-start">
         <div className="absolute inset-0 h-full">
           <div className="absolute right-0 md:right-20 bottom-24 md:bottom-0 z-10">
             <img src={windowWidth < 768 ? hex : hex1} alt="hex" />
@@ -55,7 +55,7 @@ const IndexPage: React.FC<PageProps> = () => {
         </div>
       </RelativeFullScreen>
 
-      <RelativeFullScreen classNames="bg-white">
+      <RelativeFullScreen classNames="bg-white snap-end">
         <div className="absolute inset-0 h-full w-full">
           <div className={`h-full -z-10`}>
             <img src={line} alt="line" className="w-screen absolute top-4" />
@@ -104,7 +104,7 @@ const IndexPage: React.FC<PageProps> = () => {
           </div>
         </div>
       </RelativeFullScreen>
-      <RelativeFullScreen classNames="">
+      <RelativeFullScreen classNames="snap-start">
         <div className="absolute inset-0 h-full w-full block">
           <div className="w-full h-3/4 bg-[#F0F8FF] flex justify-center items-center">
             <div className="w-full h-2/3 flex flex-col justify-center">
