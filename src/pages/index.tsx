@@ -120,8 +120,8 @@ const IndexPage: React.FC<PageProps> = () => {
               </div>
             </div>
           </div>
-          <div className="w-full h-1/4 bg-white leading-relaxed">
-            <div className="text-5xl w-2/3 h-full flex justify-center items-center ml-16">
+          <div className="w-full h-1/4 bg-white">
+            <div className="text-5xl leading-normal w-2/3 h-full flex justify-center items-center ml-16">
               <h2>
                 Let's Build
                 <br />
