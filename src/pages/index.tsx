@@ -40,7 +40,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <RelativeFullScreen classNames="bg-gradient-to-tl from-nav-light-blue to-nav-blue snap-start">
         <div className="absolute inset-0 h-full">
           <div className="absolute right-0 md:right-20 bottom-24 md:bottom-0 z-10">
-            <img src={windowWidth < 768 ? hex : hex1} alt="hex" />
+            <img src={hex1} alt="hex" />
           </div>
           <div className="absolute z-20 left-0 top-80 h-72 w-[90vw] flex flex-col md:flex-row justify-around">
             <div className="w-[40vw] flex justify-end items-center text-white text-8xl font-semibolds">

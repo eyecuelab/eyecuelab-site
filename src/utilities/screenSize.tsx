@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 
 export function screenSize() {
+    const isBrowser = () => typeof window !== "undefined";
     const [windowSize, setWindowSize] = useState({
-        winWidth: window.innerWidth,
-        winHeight: window.innerHeight,
+        winWidth: 0,
+        winHeight: 0,
     })
 
     const detectSize = () => {
@@ -14,10 +15,15 @@ export function screenSize() {
     }
 
     useEffect(() => {
-        window.addEventListener('resize', detectSize)
-
+        if (isBrowser()) {
+            window.addEventListener('resize', detectSize)
+        }
         return () => {
-            window.removeEventListener('resize', detectSize)
+            setWindowSize({
+                winWidth: 0,
+                winHeight: 0,
+            })
+            // window.removeEventListener('resize', detectSize)
         }
     }, [windowSize])
 
