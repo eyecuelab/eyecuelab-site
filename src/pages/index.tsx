@@ -20,21 +20,25 @@ import "../styles/sass/main.scss";
 import { screenSize } from "../utilities/screenSize";
 import { PlusIcon } from "@heroicons/react/outline";
 
+import WhoWeHelpPage from "./whowehelppage";
+import WhoWeArePage from "./wearepage";
+import ContactPage from "./contactpage";
+
 const IndexPage: React.FC<PageProps> = () => {
   const windowWidth = screenSize().winWidth;
-
-  console.log(windowWidth);
+  // bg-zinc-800
+  // font-proxima
   return (
-    <div className="font-proxima bg-zinc-800 w-screen h-screen overflow-x-hidden">
-      <Header />
+    <div className="w-screen h-screen overflow-x-hidden">
+      {/* <Header /> */}
 
-      <RelativeFullScreen classNames="text-5xl text-white leading-relaxed eyecuebody">
+      {/* <RelativeFullScreen classNames="text-5xl text-white leading-relaxed eyecuebody">
         <h3 className="absolute w-full bottom-36 left-0 px-4 md:px-0 md:left-44 md:bottom-36 md:w-1/2">
           Your Team for Truly Innovative <span className="font-bold">Software Design + Development</span>
         </h3>
-      </RelativeFullScreen>
+      </RelativeFullScreen> */}
 
-      <RelativeFullScreen classNames="bg-gradient-to-tl from-nav-light-blue to-nav-blue">
+      {/* <RelativeFullScreen classNames="bg-gradient-to-tl from-nav-light-blue to-nav-blue">
         <div className="h-full">
           <div className="absolute right-0 md:right-20 bottom-24 md:bottom-0 z-10">
             <img src={windowWidth < 768 ? hex : hex1} alt="hex" />
@@ -53,9 +57,9 @@ const IndexPage: React.FC<PageProps> = () => {
             <p className="text-xl">Who We Are</p>
           </div>
         </div>
-      </RelativeFullScreen>
+      </RelativeFullScreen> */}
 
-      <RelativeFullScreen classNames="bg-white">
+      {/* <RelativeFullScreen classNames="bg-white">
         <div className={`h-full -z-10`}>
           <img src={line} alt="line" className="w-screen absolute top-4" />
         </div>
@@ -101,8 +105,9 @@ const IndexPage: React.FC<PageProps> = () => {
             </div>
           </div>
         </div>
-      </RelativeFullScreen>
-      <RelativeFullScreen classNames="border">
+      </RelativeFullScreen> */}
+
+      {/* <RelativeFullScreen classNames="border">
         <div className="absolute inset-0 h-full w-full block">
           <div className="w-full h-3/4 bg-[#F0F8FF] flex justify-center items-center">
             <div className="w-full h-2/3 flex flex-col justify-center">
@@ -132,6 +137,15 @@ const IndexPage: React.FC<PageProps> = () => {
             </div>
           </div>
         </div>
+      </RelativeFullScreen> */}
+      <RelativeFullScreen classNames="">
+        <WhoWeHelpPage />
+      </RelativeFullScreen>
+      <RelativeFullScreen classNames="">
+        <WhoWeArePage />
+      </RelativeFullScreen>
+      <RelativeFullScreen classNames="">
+        <ContactPage />
       </RelativeFullScreen>
     </div>
   );
