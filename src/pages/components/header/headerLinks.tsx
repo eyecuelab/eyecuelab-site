@@ -1,4 +1,4 @@
-export const headerLinks = [
+const headerLinks = [
     {
         title: "Who We Are",
         href: "Who We Are"
@@ -20,3 +20,5 @@ export const headerLinks = [
         href: "Contact Us"
     },
 ];
+
+export default headerLinks;
