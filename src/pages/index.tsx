@@ -28,7 +28,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
   console.log(windowWidth);
   return (
-    <div className="font-proxima bg-zinc-800 w-screen h-screen overflow-x-hidden snap-y snap-mandatory capitalize">
+    <div className="bg-zinc-800 w-screen h-screen overflow-x-hidden snap-y snap-mandatory capitalize">
       <Header />
 
       <RelativeFullScreen classNames="text-5xl text-white leading-relaxed eyecuebody snap-start">
@@ -43,11 +43,11 @@ const IndexPage: React.FC<PageProps> = () => {
             <img src={windowWidth < 768 ? hex : hex1} alt="hex" />
           </div>
           <div className="absolute z-20 left-0 top-80 h-72 w-[90vw] flex flex-col md:flex-row justify-around">
-            <div className="w-[40vw] flex justify-end items-center text-white text-8xl font-proxima font-semibolds">
+            <div className="w-[40vw] flex justify-end items-center text-white text-8xl font-semibolds">
               Who Is <br />
               EyeCue Lab
             </div>
-            <div className="w-[30vw] flex justify-start items-center text-white text-3xl font-proxima font-thin leading-relaxed">
+            <div className="w-[30vw] flex justify-start items-center text-white text-3xl font-thin leading-relaxed">
               Our goal is to help your team activate your innovation potential, and build solutions that we're all excited about.
             </div>
           </div>

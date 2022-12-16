@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { Link } from "gatsby";
+// import { Link } from "gatsby";
 import { MenuAlt3Icon, XIcon } from "@heroicons/react/outline";
 import logo from "../../../images/w-eyecuelogo.png";
-import headerLinks from "./headerLinks";
+// import headerLinks from "./headerLinks";
 import cn from "classnames";
 
 export default function Header() {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
-  const handleClose = () => setNav(!nav);
+  // const handleClose = () => setNav(!nav);
 
   return (
     <>
@@ -26,7 +26,7 @@ export default function Header() {
           </div>
           <div className="hidden col-start-2 col-end-13 md:flex items-center ">
             <ul className="grid grid-cols-6 w-full pr-3">
-              {headerLinks.map((nav, idx) => {
+              {/* {headerLinks.map((nav, idx) => {
                 const navKey = `${idx}_navKey`;
                 return (
                   <li
@@ -39,7 +39,7 @@ export default function Header() {
                     </Link>
                   </li>
                 );
-              })}
+              })} */}
             </ul>
           </div>
           <div className="">
@@ -66,7 +66,7 @@ export default function Header() {
           </div>
           <div className="w-full h-full flex flex-col">
             <ul className={!nav ? "hidden" : "md:hidden flex flex-col justify-start"}>
-              {headerLinks.map((nav, idx) => {
+              {/* {headerLinks.map((nav, idx) => {
                 const navKey = `${idx}_navKey`;
                 return (
                   <li
@@ -77,7 +77,7 @@ export default function Header() {
                     {nav.title}
                   </li>
                 );
-              })}
+              })} */}
             </ul>
           </div>
         </div>
