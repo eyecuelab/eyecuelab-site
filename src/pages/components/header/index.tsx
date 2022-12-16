@@ -34,7 +34,7 @@ export default function Header() {
                     onClick={handleClose}
                     key={navKey}
                   >
-                    <Link className="" to={nav.href}>
+                    <Link className="" to="/">
                       {nav.title}
                     </Link>
                   </li>
