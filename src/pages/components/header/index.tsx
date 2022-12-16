@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 import { MenuAlt3Icon, XIcon } from "@heroicons/react/outline";
 import logo from "../../../images/w-eyecuelogo.png";
-import { headerLinks } from "./headerLinks";
+import headerLinks from "./headerLinks";
 import cn from "classnames";
 
 export default function Header() {
