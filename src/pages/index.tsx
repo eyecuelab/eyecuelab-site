@@ -4,6 +4,9 @@ import RelativeFullScreen from "./components/relativeLayout";
 import type { HeadFC, PageProps } from "gatsby";
 import hex from "../images/Icon.png";
 import hex1 from "../images/Icon (1).png";
+import shape1 from "../images/Icon (2).png";
+import shape2 from "../images/Icon (3).png";
+import shape3 from "../images/Icon (4).png";
 import line from "../images/Vector 15 (2).png";
 import middleShape from "../images/Group 135.png";
 import thirdShape from "../images/Group 136.png";
@@ -25,7 +28,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
   console.log(windowWidth);
   return (
-    <div className="font-proxima bg-zinc-800 w-screen h-screen overflow-x-hidden snap-y">
+    <div className="font-proxima bg-zinc-800 w-screen h-screen overflow-x-hidden snap-y snap-mandatory capitalize">
       <Header />
 
       <RelativeFullScreen classNames="text-5xl text-white leading-relaxed eyecuebody snap-start">
@@ -39,12 +42,12 @@ const IndexPage: React.FC<PageProps> = () => {
           <div className="absolute right-0 md:right-20 bottom-24 md:bottom-0 z-10">
             <img src={windowWidth < 768 ? hex : hex1} alt="hex" />
           </div>
-          <div className="absolute z-20 left-0 bottom-72 h-72 w-[90vw] flex flex-col md:flex-row justify-between">
+          <div className="absolute z-20 left-0 top-80 h-72 w-[90vw] flex flex-col md:flex-row justify-around">
             <div className="w-[40vw] flex justify-end items-center text-white text-8xl font-proxima font-semibolds">
               Who Is <br />
               EyeCue Lab
             </div>
-            <div className="w-[40vw] flex justify-start items-center text-white text-3xl font-proxima font-thin leading-relaxed">
+            <div className="w-[30vw] flex justify-start items-center text-white text-3xl font-proxima font-thin leading-relaxed">
               Our goal is to help your team activate your innovation potential, and build solutions that we're all excited about.
             </div>
           </div>
@@ -104,18 +107,19 @@ const IndexPage: React.FC<PageProps> = () => {
           </div>
         </div>
       </RelativeFullScreen>
+
       <RelativeFullScreen classNames="snap-start">
         <div className="absolute inset-0 h-full w-full block">
           <div className="w-full h-3/4 bg-[#F0F8FF] flex justify-center items-center">
             <div className="w-full h-2/3 flex flex-col justify-center">
-              <div className="h-1/2 flex justify-center items-center">
+              <div className="h-1/3 flex justify-center items-center">
                 <img src={gLogo} alt="google" className="mr-14" />
                 <img src={nLogo} alt="nike" className="mr-14" />
                 <img src={eLogo} alt="edf" className="mr-14" />
                 <img src={inLogo} alt="intel" className="mr-14" />
                 <img src={ingLogo} alt="inergy" />
               </div>
-              <div className="h-1/2 flex justify-center items-center">
+              <div className="h-1/3 flex justify-center items-center">
                 <img src={pLogo} alt="powur" className="mr-14" />
                 <img src={kLogo} alt="knox" className="mr-14" />
                 <img src={sLogo} alt="shl" className="mr-14" />
@@ -123,7 +127,7 @@ const IndexPage: React.FC<PageProps> = () => {
             </div>
           </div>
           <div className="w-full h-1/4 bg-white">
-            <div className="text-5xl leading-normal w-2/3 h-full flex justify-center items-center ml-16">
+            <div className="text-5xl leading-normal w-1/3 h-full flex justify-end items-center pl-10 ml-16">
               <h2>
                 Let's Build
                 <br />
@@ -131,6 +135,35 @@ const IndexPage: React.FC<PageProps> = () => {
                   Something Amazing
                 </span>
               </h2>
+            </div>
+          </div>
+        </div>
+      </RelativeFullScreen>
+
+      <RelativeFullScreen classNames="snap-start text-white">
+        <div className="absolute inset-0 h-full w-full grid grid-cols-2">
+          <div className="bg-[#0085FF] w-full h-full flex justify-end items-center">
+            <div className="h-2/3 flex flex-col items-end justify-center">
+              <div className="p-12 mb-10"><img src={shape1} alt="plane" /></div>
+              <div className="flex flex-col justify-start w-2/3 p-8">
+                <h1 className="text-5xl font-semibold leading-relaxed">Launch<br />Successful MVPs</h1>
+                <p className="mt-8">You bring the vision, we'll help you successfully take it to market through our proven approach.</p>
+              </div>
+            </div>
+          </div>
+          <div className="w-full h-full flex flex-col">
+            <div className="relative h-1/2 bg-[#0076FF] flex justify-start items-center">
+              <div className="ml-8 p-10 z-10 max-w-md flex flex-col justify-start items-start"><h1 className="text-5xl font-semibold leading-relaxed">Enhance existing features</h1>
+                <p className="mt-4">Modernize internal workflows + architecture to produce industry-leading solutions.</p>
+              </div>
+              <div className="absolute left-0 w-full flex justify-center"><img src={shape2} alt="plane" /></div>
+            </div>
+            <div className="relative h-1/2 bg-[#0047FB] flex justify-start items-center">
+              <div className=" ml-8 p-16 z-10 w-3/5 flex flex-col justify-start items-start">
+                <h1 className="text-5xl font-semibold leading-relaxed">Create New Innovative Products</h1>
+                <p className="mt-4">Shake up your industry by developing + launching your next big product with our team of innovation experts.</p>
+              </div>
+              <div className="absolute left-0 w-full flex justify-center ml-16"><img src={shape3} alt="plane" /></div>
             </div>
           </div>
         </div>
