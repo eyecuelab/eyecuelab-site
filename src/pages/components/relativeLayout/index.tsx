@@ -5,7 +5,7 @@ interface RelativeFullScreenProps {
 }
 export default function RelativeFullScreen({ classNames, children }: RelativeFullScreenProps) {
     return (
-        <div className={`relative bottom-0 min-h-full ${classNames}`} >
+        <div className={`relative bottom-0 left-0 min-h-full ${classNames}`} >
             {children}
         </div >
     )
