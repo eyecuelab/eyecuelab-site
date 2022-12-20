@@ -11,13 +11,13 @@ export default function WhoWeHelpPage() {
       </div>
       <div className='h-80'>video container?</div>
       <div className='bg-lighter-grey px-6'>
-        <div>
+        <div className='text-center'>
           <p className='pt-16 pb-7 text-2xl font-bold'>
             Reduce Complexity And Eliminate Human Error
           </p>
         </div>
         <div>
-          <p className='font-medium'>
+          <p className='font-medium text-center'>
             {helpCopy}
           </p>
         </div>

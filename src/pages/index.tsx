@@ -23,10 +23,14 @@ import "../styles/sass/main.scss";
 import { screenSize } from "../utilities/screenSize";
 import { PlusIcon } from "@heroicons/react/outline";
 
+import WhoWeHelpPage from "./whowehelppage";
+import WhoWeArePage from "./wearepage";
+import ContactPage from "./contactpage";
+
 const IndexPage: React.FC<PageProps> = () => {
   const windowWidth = screenSize().winWidth;
-
-  console.log(windowWidth);
+  // bg-zinc-800
+  // font-proxima
   return (
     <div className="bg-zinc-800 w-screen h-screen overflow-x-hidden snap-y snap-mandatory capitalize">
       <Header />
@@ -37,8 +41,8 @@ const IndexPage: React.FC<PageProps> = () => {
         </h3>
       </RelativeFullScreen>
 
-      <RelativeFullScreen classNames="bg-gradient-to-tl from-nav-light-blue to-nav-blue snap-start">
-        <div className="absolute inset-0 h-full">
+      {/* <RelativeFullScreen classNames="bg-gradient-to-tl from-nav-light-blue to-nav-blue">
+        <div className="h-full">
           <div className="absolute right-0 md:right-20 bottom-24 md:bottom-0 z-10">
             <img src={hex1} alt="hex" />
           </div>
@@ -56,12 +60,24 @@ const IndexPage: React.FC<PageProps> = () => {
             <p className="text-xl">Who We Are</p>
           </div>
         </div>
-      </RelativeFullScreen>
+      </RelativeFullScreen> */}
 
-      <RelativeFullScreen classNames="bg-white snap-end">
-        <div className="absolute inset-0 h-full w-full">
-          <div className={`h-full -z-10`}>
-            <img src={line} alt="line" className="w-screen absolute top-4" />
+      {/* <RelativeFullScreen classNames="bg-white">
+        <div className={`h-full -z-10`}>
+          <img src={line} alt="line" className="w-screen absolute top-4" />
+        </div>
+        <div className="absolute top-0 w-full h-full z-20 grid grid-cols-3">
+          <div className="flex flex-col justify-start items-end">
+            <div className="w-full flex justify-start pl-7 pt-5">
+              <div className="w-2/3 flex justify-center items-center h-full">
+                <img src={firstShape} alt="shape" />
+              </div>
+            </div>
+            <div className="h-1/3 w-1/2 flex flex-col justify-center items-start">
+              <h3 className="text-4xl">Precision</h3>
+              <br />
+              <p className="">You bring the vision, we'll help you successfully take it to market through our proven approach.</p>
+            </div>
           </div>
           <div className="absolute top-0 w-full h-full z-20 grid grid-cols-3">
             <div className="flex flex-col justify-start items-end">
@@ -138,6 +154,15 @@ const IndexPage: React.FC<PageProps> = () => {
             </div>
           </div>
         </div>
+      </RelativeFullScreen> */}
+      <RelativeFullScreen classNames="">
+        <WhoWeHelpPage />
+      </RelativeFullScreen>
+      <RelativeFullScreen classNames="">
+        <WhoWeArePage />
+      </RelativeFullScreen>
+      <RelativeFullScreen classNames="">
+        <ContactPage />
       </RelativeFullScreen>
 
       <RelativeFullScreen classNames="snap-start text-white">
