@@ -1,14 +1,5 @@
-
-
-import ClientSection from "./components/client_section";
-
 import Header from "./components/header";
-import LandingPage from "./components/landing_section";
-import RelativeFullScreen from "./components/relative_layout";
-import ShapesSection from "./components/shapes_section";
-
-import WhoWeAreSection from "./components/we_are_section"
-import WhoIsSection from "./components/who_section"
+import HomePage from "./components/homepage";
 
 export default function Index() {
   return (
@@ -17,25 +8,7 @@ export default function Index() {
       className="bg-zinc-400 w-screen h-screen overflow-x-auto snap-y snap-mandatory capitalize"
     >
       <Header />
-      <RelativeFullScreen classNames="" >
-       <LandingPage />
-      </RelativeFullScreen>
-
-      <RelativeFullScreen>
-        <WhoIsSection />
-      </RelativeFullScreen>
-
-      <RelativeFullScreen>
-        <WhoWeAreSection />
-      </RelativeFullScreen>
-   
-      <RelativeFullScreen>
-        <ClientSection />
-      </RelativeFullScreen>
-
-      <RelativeFullScreen>
-        <ShapesSection />
-      </RelativeFullScreen>
+      <HomePage/>
     </div>
   );
 }
