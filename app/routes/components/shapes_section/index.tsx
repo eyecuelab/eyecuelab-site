@@ -1,6 +1,6 @@
-import shape1 from "../../public/images/Icon (2).png";
-import shape2 from "../../public/images/Icon (3).png";
-import shape3 from "../../public/images/Icon (4).png";
+import shape1 from "~/public/images/Icon (2).png";
+import shape2 from "~/public/images/Icon (3).png";
+import shape3 from "~/public/images/Icon (4).png";
 
 export default function ShapesSection(){
   return (
