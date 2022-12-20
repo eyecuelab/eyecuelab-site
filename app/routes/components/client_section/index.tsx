@@ -1,11 +1,11 @@
-import gLogo from "../../public/images/logos/google.png"
-import nLogo from "../../public/images/logos/nike.png"
-import eLogo from "../../public/images/logos/edf.png"
-import inLogo from "../../public/images/logos/intel.png"
-import ingLogo from "../../public/images/logos/inergy.png"
-import pLogo from "../../public/images/logos/powur.png"
-import kLogo from "../../public/images/logos/knox.png"
-import sLogo from "../../public/images/logos/shl.png"
+import eLogo from "~/public/images/logos/edf.png"
+import gLogo from "~/public/images/logos/google.png"
+import ingLogo from "~/public/images/logos/inergy.png"
+import inLogo from "~/public/images/logos/intel.png"
+import kLogo from "~/public/images/logos/knox.png"
+import nLogo from "~/public/images/logos/nike.png"
+import pLogo from "~/public/images/logos/powur.png"
+import sLogo from "~/public/images/logos/shl.png"
 
 export default function ClientSection(){
   return (

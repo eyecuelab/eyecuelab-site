@@ -1,7 +1,7 @@
-import line from "../../public/Frame 113.svg";
-import triangle from "../../public/icon1.svg";
-import pyramid from "../../public/icon2.svg";
-import hex2 from "../../public/icon3.svg";
+import line from "~/public/Frame 113.svg";
+import triangle from "~/public/icon1.svg";
+import pyramid from "~/public/icon2.svg";
+import hex2 from "~/public/icon3.svg";
 
 export default function WhoWeAreSection() {
   return (

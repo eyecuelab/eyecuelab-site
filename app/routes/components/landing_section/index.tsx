@@ -1,5 +1,3 @@
-import logo from "../../public/images/w-eyecuelogo.png";
-
 export default function LandingPage() {
   return (
     <div className="absolute inset-0 bg-[url('../../public/images/Video.png')] bg-cover">

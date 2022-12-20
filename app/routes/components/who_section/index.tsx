@@ -1,4 +1,4 @@
-import hex1 from "../../public/Frame 111.svg";
+import hex1 from "~/public/Frame 111.svg";
 import { PlusIcon } from "@heroicons/react/outline";
 
 export default function WhoIsSection() {

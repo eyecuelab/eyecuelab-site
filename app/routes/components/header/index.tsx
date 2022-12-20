@@ -1,4 +1,4 @@
-import logo from "../../public/images/w-eyecuelogo.png";
+import logo from "~/public/images/w-eyecuelogo.png" 
 
 export default function Header() {
   return (
@@ -12,7 +12,7 @@ export default function Header() {
       <div className="w-full h-full text-white flex justify-center items-center">Who We Are</div>
       <div className="w-full h-full text-white flex justify-center items-center">Case Studies</div>
       <div className="w-full h-full text-white flex justify-center items-center">What We Do</div>
-      <div className="w-full h-full col-span-2 text-white flex justify-start items-center border">Innovation Assessment</div>
+      <div className="w-full h-full col-span-2 text-white flex justify-start items-center">Innovation Assessment</div>
       <div className="w-full h-full col-span-4"></div>
       <div className="w-full h-full col-span-2 text-white flex justify-center items-center">
         <p className="border border-white h-1/3 w-1/2 p-4 flex justify-center items-center">Contact Us</p>
