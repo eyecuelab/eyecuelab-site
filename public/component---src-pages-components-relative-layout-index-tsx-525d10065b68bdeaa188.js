@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkeyecuelab_site=self.webpackChunkeyecuelab_site||[]).push([[771],{5201:function(e,t,l){l.r(t),l.d(t,{default:function(){return u}});var n=l(7294);function u(e){let{classNames:t,children:l}=e;return n.createElement("div",{className:"relative bottom-0 left-0 min-h-full "+t},l)}}}]);
+//# sourceMappingURL=component---src-pages-components-relative-layout-index-tsx-525d10065b68bdeaa188.js.map
