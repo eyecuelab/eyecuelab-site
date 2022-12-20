@@ -10,14 +10,20 @@ import ShapesSection from "./components/shapes_section";
 import WhoWeAreSection from "./components/we_are_section"
 import WhoIsSection from "./components/who_section"
 
+import WhoWeHelpPage from "./components/we_help_section";
+import LetsTalk from "./components/lets_talk_section";
+import WhoWeArePage from "./components/we_are_case_studies_section";
+
+// bg-zinc-400
+
 export default function Index() {
   return (
     <div
       style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}
-      className="bg-zinc-400 w-screen h-screen overflow-x-auto snap-y snap-mandatory capitalize"
+      className="w-screen h-screen overflow-x-auto snap-y snap-mandatory capitalize"
     >
-      <Header />
-      <RelativeFullScreen classNames="" >
+      {/* <Header /> */}
+      {/* <RelativeFullScreen classNames="" >
        <LandingPage />
       </RelativeFullScreen>
 
@@ -35,6 +41,15 @@ export default function Index() {
 
       <RelativeFullScreen>
         <ShapesSection />
+      </RelativeFullScreen> */}
+      <RelativeFullScreen>
+        <WhoWeHelpPage />
+      </RelativeFullScreen>
+      <RelativeFullScreen>
+        <WhoWeArePage />
+      </RelativeFullScreen>
+      <RelativeFullScreen>
+        <LetsTalk />
       </RelativeFullScreen>
     </div>
   );
