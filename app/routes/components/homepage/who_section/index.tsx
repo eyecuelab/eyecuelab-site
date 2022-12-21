@@ -8,7 +8,7 @@ export default function WhoIsSection() {
       {/* mobile */}
       <div className="lg:hidden w-full h-full grid grid-cols-3 grid-rows-4 z-20">
         <div className="row-start-2 row-span-2 col-start-1 col-span-3 p-3 flex justify-start items-end">
-          <div className="h-3/4 container flex flex-col justify-end">
+          <div className="h-3/4 w-[94vw] mx-auto flex flex-col justify-end">
             <h3 className="text-white text-5xl font-semibold leading-relaxed">
               Who Is <br />
               EyeCue Lab?
@@ -34,7 +34,7 @@ export default function WhoIsSection() {
         </div>
       </div>
       {/* desktop */}
-      <div className="container mx-auto">
+      <div className="w-[94vw] mx-auto h-full flex items-center">
         <div className="hidden lg:grid grid-cols-3 grid-rows-3">
           <div className="row-start-2 col-start-1 flex justify-start items-center">
             <h3 className="text-white text-7xl font-semibold">
