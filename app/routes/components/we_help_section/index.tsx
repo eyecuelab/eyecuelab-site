@@ -3,27 +3,34 @@ import { helpCopy } from './constants';
 
 export default function WhoWeHelpPage() {
   return (
-    <div className='flex flex-col w-full h-full'>
-      <div className='pt-16 pb-7 text-3xl font-bold px-6'>
+    <div className='w-screen h-screen grid'>
+      <div className='pt-16 text-3xl font-bold px-6'>
         <h1>Who We Help</h1>
       </div>
-      <div className='h-80'>video container?</div>
-      <div className='bg-lighter-grey px-6'>
-        <div className='text-center'>
-          <p className='pt-16 pb-7 text-2xl font-bold'>
-            Reduce Complexity And Eliminate Human Error
-          </p>
+      <div className='grid grid-rows-2 md:grid-cols-2 md:grid-rows-1'>
+        <div className='grid justify-items-center content-center bg-blue-grey'>
+          <div>video?</div>
         </div>
-        <div>
-          <p className='font-medium text-center'>
-            {helpCopy}
-          </p>
-        </div>
-        <div className='mt-8 mb-14'>
-          <Button
-            style="w-full h-12 border border-primary-blue text-primary-blue font-bold"
-            text="Case Study +"
-          />
+        <div className='bg-lighter-grey px-6 md:grid md:grid-cols-6 content-center text-center md:text-left'>
+          <div className='col-start-2 col-span-3'>
+            <div className=''>
+              <p className='pt-16 pb-7 text-2xl font-bold'>
+                Reduce Complexity And Eliminate Human Error
+              </p>
+            </div>
+            <div>
+              <p className='font-medium'>
+                {helpCopy}
+              </p>
+            </div>
+            <div className='mt-8 mb-14'>
+              <Button
+                style="w-full h-12 border border-primary-blue text-primary-blue font-bold"
+                text="Case Study +"
+              />
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
