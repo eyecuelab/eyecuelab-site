@@ -1,14 +1,5 @@
-
-
-import ClientSection from "./components/client_section";
-
 import Header from "./components/header";
-import LandingPage from "./components/landing_section";
-import RelativeFullScreen from "./components/relative_layout";
-import ShapesSection from "./components/shapes_section";
-
-import WhoWeAreSection from "./components/we_are_section"
-import WhoIsSection from "./components/who_section"
+import HomePage from "./components/homepage";
 
 import WhoWeHelpPage from "./components/we_help_section";
 import LetsTalk from "./components/lets_talk_section";
@@ -42,15 +33,11 @@ export default function Index() {
       <RelativeFullScreen>
         <ShapesSection />
       </RelativeFullScreen> */}
-      <RelativeFullScreen>
-        <WhoWeHelpPage />
-      </RelativeFullScreen>
-      <RelativeFullScreen>
-        <WhoWeArePage />
-      </RelativeFullScreen>
-      <RelativeFullScreen>
-        <LetsTalk />
-      </RelativeFullScreen>
+      {/* <Header />
+      <HomePage/> */}
+      <WhoWeHelpPage />
+      <WhoWeArePage />
+      <LetsTalk />
     </div>
   );
 }
