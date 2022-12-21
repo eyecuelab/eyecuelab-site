@@ -1267,6 +1267,10 @@ video {
   padding-bottom: 3.5rem;
 }
 
+.pl-8 {
+  padding-left: 2rem;
+}
+
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;

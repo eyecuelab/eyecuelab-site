@@ -25,7 +25,7 @@ export default function WhoWeAreSection() {
                     className="w-1/3 h-1/3"
                   />
                 </div>
-                <div className="w-2/3">
+                <div className="w-4/5">
                   <h3 className="text-4xl font-semibold">Precision</h3>
                   <br />
                   <p className="text-lg">You bring the vision, we'll help you successfully take it to market through our proven approach.</p>
@@ -43,7 +43,7 @@ export default function WhoWeAreSection() {
                     className="w-2/5 h-2/5"
                   />
                 </div>
-                <div className="w-2/3 pl-10">
+                <div className="w-4/5 pl-6">
                   <h3 className="text-4xl font-semibold">Innovation</h3>
                   <br />
                   <p className="text-lg">
@@ -63,7 +63,7 @@ export default function WhoWeAreSection() {
                     className="w-2/5 h-2/5 "
                   />
                 </div>
-                <div className="w-4/5 pl-10">
+                <div className="w-4/5 pl-6">
                   <h3 className="text-4xl font-semibold">Vision</h3>
                   <br />
                   <p className="text-lg">
