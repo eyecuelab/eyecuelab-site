@@ -13,6 +13,7 @@ export default function WhoIsSection() {
               Who Is <br />
               EyeCue Lab?
             </h3>
+            <br />
             <h3 className="text-white text-xl leading-relaxed">
               Our goal is to help your team activate your innovation potential, and build solutions that we're all excited about.
             </h3>
