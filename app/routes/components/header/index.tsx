@@ -1,6 +1,7 @@
 import { MenuAlt3Icon, XIcon } from "@heroicons/react/outline";
 import { useState } from "react";
 import logo from "~/public/images/w-eyecuelogo.png";
+import hex from "~/public/images/Icon.png";
 
 export default function Header() {
   const [nav, setNav] = useState(false);
@@ -13,14 +14,9 @@ export default function Header() {
   return (
     <>
       {/* Mobile */}
-      <div className="min-w-full h-28  text-xl text-white whitespace-nowrap fixed inset-0 z-50 bg-transparent grid grid-cols-6 lg:hidden">
-        <div className="flex justify-center items-center p-1">
-          <img
-            src={logo}
-            alt="EyeCueLab"
-            width={57}
-            height={57}
-          />
+      <div className="min-w-full h-28 text-xl text-white whitespace-nowrap fixed inset-0 z-50 bg-transparent grid grid-cols-6 lg:hidden">
+        <div className="flex justify-center items-center">
+          <img src={logo} alt="EyeCueLab" width={57} height={57} className="pl-3" />
         </div>
         <div></div>
         <div className="col-span-2 flex items-center justify-center">
@@ -30,47 +26,43 @@ export default function Header() {
         </div>
         <div></div>
         <div className="flex justify-center items-center">
-          <MenuAlt3Icon
-            className="w-10 h-10"
-            onClick={() => handleNavToggle(nav)}
-          />
+          <MenuAlt3Icon className="w-10 h-10" onClick={() => handleNavToggle(nav)} />
         </div>
       </div>
       {nav && (
         <div className="w-full h-full fixed inset-0 z-50 text-white bg-gradient-to-tl from-nav-light-blue to-nav-blue lg:hidden">
-          <div className="container mx-auto h-full">
-          <div className="h-28 grid grid-cols-6">
-            <div className="flex justify-center items-center">
-              <img
-                src={logo}
-                alt="EyeCueLab"
-                width={57}
-                height={57}
-              />
+          <div className="w-[80vw] mx-auto h-full">
+            <div className="h-28 grid grid-cols-6 z-50">
+              <div className="flex justify-start items-center">
+                <img src={logo} alt="EyeCueLab" width={57} height={57} className="pl-3" />
+              </div>
+              <div className="col-span-4"></div>
+              <div className="flex justify-center items-center">
+                <XIcon className="w-10 h-10" onClick={() => handleNavToggle(nav)} />
+              </div>
             </div>
-            <div className="col-span-4"></div>
-            <div className="flex justify-center items-center">
-              <XIcon
-                className="w-10 h-10"
-                onClick={() => handleNavToggle(nav)}
-              />
+            <div className="h-2/3 flex items-center text-2xl pl-4">
+              <div className="h-3/4 w-full">
+                <div className="flex flex-col items-start justify-start ">
+                  <div className="mt-14">Who We Are</div>
+                  <div className="mt-14">Case Studies</div>
+                  <div className="mt-14">What We Do</div>
+                  <div className="mt-14">Innovation Assessment</div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="h-2/3 flex items-center text-2xl pl-4">
-            <div className="h-3/4 w-full">
-            <div className="flex flex-col items-start justify-start ">
-            <div className="mt-14">Who We Are</div>
-            <div className="mt-14">Case Studies</div>
-            <div className="mt-14">What We Do</div>
-            <div className="mt-14">Innovation Assessment</div>
-            </div>
+            <div className="flex justify-center items-center px-4 mt-24">
+              <div className="w-full h-11 flex justify-center items-center border border-white">
+                <p>Contact Us</p>
+              </div>
             </div>
           </div>
-          <div className="flex justify-center items-center px-4">
-          <div className="w-full h-11 flex justify-center items-center border border-white">
-            <p>Contact Us</p>
-          </div>
-          </div>
+          <div className="absolute inset-0 h-full w-full grid grid-rows-5 -z-10">
+            <div className="h-full row-start-3 row-span-3 flex justify-end items-end">
+              <div className="h-full pt-10">
+                <img src={hex} alt="hex" />
+              </div>
+            </div>
           </div>
         </div>
       )}
@@ -78,12 +70,7 @@ export default function Header() {
       {/* Desktop */}
       <div className="hidden w-full h-28 text-xl text-white whitespace-nowrap fixed inset-0 z-50 bg-transparent lg:grid grid-cols-12 gap-2">
         <div className="flex justify-center items-center">
-          <img
-            src={logo}
-            alt="EyeCueLab"
-            width={57}
-            height={57}
-          />
+          <img src={logo} alt="EyeCueLab" width={57} height={57} />
         </div>
         <div className="col-span-7 flex items-center">
           <div className="flex justify-start pl-6">
