@@ -31,7 +31,7 @@ export default function Header() {
       </div>
       {nav && (
         <div className="w-full h-full fixed inset-0 z-50 text-white bg-gradient-to-tl from-nav-light-blue to-nav-blue lg:hidden">
-          <div className="w-[94vw] mx-auto h-full">
+          <div className="w-[80vw] mx-auto h-full">
             <div className="h-28 grid grid-cols-6 z-50">
               <div className="flex justify-start items-center">
                 <img src={logo} alt="EyeCueLab" width={57} height={57} className="pl-3" />
