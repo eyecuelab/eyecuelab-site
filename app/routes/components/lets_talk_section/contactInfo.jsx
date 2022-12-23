@@ -1,6 +1,4 @@
 import { addressLineOne, addressLineTwo, contactEmail } from './constants';
-// import buildingIcon from '../../images/building.png';
-// import envelopeIcon from '../../images/envelope.png';
 import buildingIcon from "../../../../public/images/building.png";
 import envelopeIcon from "../../../../public/images/envelope.png";
 
@@ -8,25 +6,21 @@ import envelopeIcon from "../../../../public/images/envelope.png";
 
 export default function ContactInfo() {
   return (
-    <div className='px-6 py-14'>
-      <div className='flex flex-col'>
-        <div className='flex flex-row items-center pb-7'>
-          <img src={buildingIcon} alt="Building Icon" className="h-[30px] w-[29px]" />
-          <div className='flex flex-col pl-10 font-medium'>
-            <div>{addressLineOne}</div>
-            <div>{addressLineTwo}</div>
-          </div>
+    <div className='grid grid-cols-6 grid-rows-4 gap-y-4 px-6 mt-6 md:grid-rows-3 md:gap-y-0'>
+      <div className='grid grid-cols-6 gap-x-6 col-span-6 font-medium md:col-span-2'>
+        <img src={buildingIcon} alt="Building Icon" className="h-[30px] w-[29px]" />
+        <div className='col-span-5'>
+          <p>{addressLineOne}</p>
+          <p>{addressLineTwo}</p>
         </div>
-        <div className='flex flex-row items-center pb-7 font-medium'>
-          <img src={envelopeIcon} alt="Envelope" className="h-[20px] w-[30px]" />
-          <div className='pl-10'>
-            {contactEmail}
-          </div>
-        </div>
-        <div className='h-px bg-light-grey mb-7' />
-        <div className='flex flex-row'>
-          Copyright 2021, EyeCue Lab
-        </div>
+      </div>
+      <div className='grid grid-cols-6 gap-x-6 col-span-6 font-medium md:col-span-2 md:row-start-2'>
+        <img src={envelopeIcon} alt="Envelope" className="h-[20px] w-[30px]" />
+        <p className='col-span-5'>{contactEmail}</p>
+      </div>
+      {/* <div className='h-px bg-light-grey mb-7' /> */}
+      <div className='col-span-5 md:col-start-5'>
+        Copyright 2021, EyeCue Lab
       </div>
     </div>
   )

@@ -5,9 +5,9 @@ import { talkCopy } from "./constants";
 
 export default function LetsTalk() {
   return (
-    <div className='w-screen h-screen'>
-      <div className="grid grid-rows-2 md:grid-cols-2">
-        <div className='bg-darker-blue px-6 text-white'>
+    <div className='grid grid-rows-3 w-screen h-screen'>
+      <div className="grid grid-rows-2 row-span-2 md:grid-cols-2">
+        <div className='grid bg-darker-blue px-6 text-white md:row-span-2 md:content-center'>
           <div className='mt-20 pb-2'>
             <h1 className='text-3xl font-bold'>Let's Talk</h1>
           </div>
@@ -21,7 +21,7 @@ export default function LetsTalk() {
             />
           </div>
         </div>
-        <div className='bg-primary-blue text-white grid justify-items-center content-center'>
+        <div className='bg-primary-blue text-white grid justify-items-center content-center md:row-span-2'>
           <div>there is an image / animation on this one</div>
         </div>
       </div>
