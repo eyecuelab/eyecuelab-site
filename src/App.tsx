@@ -4,8 +4,6 @@ import HomePage from "./components/homepage";
 import "./styles/App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div
       style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}

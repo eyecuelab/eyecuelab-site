@@ -26,8 +26,8 @@ export default function ClientSection(){
               </div>
             </div>
           </div>
-          <div className="w-full h-1/4 bg-white">
-            <div className="text-5xl leading-normal w-1/3 h-full flex justify-end items-center pl-10 ml-16">
+          <div className="w-full h-1/4 bg-white border">
+            <div className="text-5xl leading-normal w-1/3 h-full flex justify-center items-center ml-20">
               <h2>
                 Let's Build
                 <br />
