@@ -4,6 +4,9 @@ import LandingPage from "./landing_section";
 import ShapesSection from "./shapes_section";
 import WhoWeAreSection from "./we_are_section";
 import WhoIsSection from "./who_section";
+import WhoWeHelpPage from "./we_help_section";
+import WhoWeArePage from "./we_are_case_studies_section";
+import LetsTalk from "./lets_talk_section";
 
 export default function HomePage() {
   return (
@@ -26,6 +29,18 @@ export default function HomePage() {
 
       <RelativeFullScreen>
         <ShapesSection />
+      </RelativeFullScreen>
+
+      <RelativeFullScreen>
+        <WhoWeHelpPage />
+      </RelativeFullScreen>
+
+      <RelativeFullScreen>
+        <WhoWeArePage />        
+      </RelativeFullScreen>
+
+      <RelativeFullScreen>
+        <LetsTalk />        
       </RelativeFullScreen>
     </>
   );

@@ -9,7 +9,6 @@ export default function Header() {
   function handleNavToggle(nav: boolean) {
     setNav(!nav);
   }
-  console.log(nav);
 
   return (
     <>
