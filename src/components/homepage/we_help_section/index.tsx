@@ -4,7 +4,7 @@ import { helpCopy } from './constants';
 export default function WhoWeHelpPage() {
   return (
     <div className='w-screen h-screen grid'>
-      <div className='pt-16 text-3xl font-bold px-6'>
+      <div className='grid text-3xl font-bold px-6 content-center'>
         <h1>Who We Help</h1>
       </div>
       <div className='grid grid-rows-2 md:grid-cols-2 md:grid-rows-1'>

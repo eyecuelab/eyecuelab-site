@@ -11,7 +11,7 @@ import LetsTalk from "./lets_talk_section";
 export default function HomePage() {
   return (
     <>
-      <RelativeFullScreen classNames="">
+      {/* <RelativeFullScreen classNames="">
         <LandingPage />
       </RelativeFullScreen>
 
@@ -29,7 +29,7 @@ export default function HomePage() {
 
       <RelativeFullScreen>
         <ShapesSection />
-      </RelativeFullScreen>
+      </RelativeFullScreen> */}
 
       <RelativeFullScreen>
         <WhoWeHelpPage />
