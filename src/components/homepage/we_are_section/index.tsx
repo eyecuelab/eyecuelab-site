@@ -4,11 +4,11 @@ import slice from "../../../assets/Slice 1.svg";
 import Carousel from "./carousel";
 export default function WhoWeAreSection() {
   return (
-    <div className="absolute inset-0  bg-white">
+    <div className="absolute inset-0 bg-white">
       {/* Mobile */}
       <Carousel />
       {/* Desktop */}
-      <div className="hidden w-full h-full absolute z-10 overflow-x-hidden md:flex">
+      <div className="hidden w-full h-full absolute z-10 overflow-x-hidden lg:flex">
         <img
           src={line1}
           alt="line"
