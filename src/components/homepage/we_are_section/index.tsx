@@ -4,7 +4,7 @@ import slice from "../../../assets/Slice 1.svg";
 import Carousel from "./carousel";
 export default function WhoWeAreSection() {
   return (
-    <div className="absolute inset-0  bg-white border border-red-400">
+    <div className="absolute inset-0  bg-white">
       {/* Mobile */}
       <Carousel />
       {/* Desktop */}
@@ -16,7 +16,7 @@ export default function WhoWeAreSection() {
         />
       </div>
       <div className="w-[80vw] mx-auto h-full">
-        <div className="w-full h-full grid grid-cols-3 gap-3">
+        <div className="w-full h-full hidden md:grid grid-cols-3 gap-3">
           <div className="w-full h-full flex justify-start items-end">
             <div className="w-full h-2/3 flex items-start">
               <div className="w-4/5 h-1/2">

@@ -24,7 +24,7 @@ export default function Carousel() {
           index === carouselIndex && (
             <div
               key={index}
-              className="border border-red-400 w-full h-full"
+              className="w-full h-full"
             >
               {item}
             </div>
