@@ -25,6 +25,9 @@ module.exports = {
       colors:{
         'nav-blue': '#5403FF',
         'nav-light-blue': '#31DAFF'
+      },
+      backgroundImage:{
+        'landingPage': "url('/src/assets/Video.png')",
       }
     }
     
