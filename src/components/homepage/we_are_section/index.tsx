@@ -1,10 +1,19 @@
 import line1 from "../../../assets/Frame 115.svg";
-
+import Rectangle from "./rectangle";
+import slice from "../../../assets/Slice 1.svg";
+import Carousel from "./carousel";
 export default function WhoWeAreSection() {
   return (
-    <div className="absolute inset-0 bg-white ">
-      <div className="w-full h-full absolute z-10 overflow-x-hidden">
-        <img src={line1} alt="line" className="w-full h-full pb-36" />
+    <div className="absolute inset-0  bg-white border border-red-400">
+      {/* Mobile */}
+      <Carousel />
+      {/* Desktop */}
+      <div className="hidden w-full h-full absolute z-10 overflow-x-hidden md:flex">
+        <img
+          src={line1}
+          alt="line"
+          className="w-full h-full pb-36"
+        />
       </div>
       <div className="w-[80vw] mx-auto h-full">
         <div className="w-full h-full grid grid-cols-3 gap-3">
@@ -22,7 +31,9 @@ export default function WhoWeAreSection() {
               <div className="w-4/5 h-1/2 flex flex-col justify-center">
                 <h3 className="text-4xl font-semibold">Innovation</h3>
                 <br />
-                <p className="text-base">We've been in business for over 10-years, but still bring a fresh "startup velocity" to all our partners' projects.</p>
+                <p className="text-base">
+                  We've been in business for over 10-years, but still bring a fresh "startup velocity" to all our partners' projects.
+                </p>
               </div>
             </div>
           </div>
