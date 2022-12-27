@@ -21,7 +21,7 @@ export default function HomePage() {
       </RelativeFullScreen>
 
       <RelativeFullScreen>
-        <ClientSection />
+        {/* <ClientSection /> */}
       </RelativeFullScreen>
 
       <RelativeFullScreen>
