@@ -106,7 +106,7 @@ export default function Header() {
         </div>
         <div className="col-span-2 w-full"></div>
         <div className="col-span-2 flex justify-center items-center">
-          <div className="h-11 w-52 flex justify-center items-center border">
+          <div className="h-11 w-52 flex justify-center items-center border border-white">
             <p>Contact Us</p>
           </div>
         </div>

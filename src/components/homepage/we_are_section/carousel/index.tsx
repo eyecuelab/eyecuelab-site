@@ -18,7 +18,7 @@ export default function Carousel() {
   }, [carouselIndex]);
 
   return (
-    <div className="border w-full h-full overflow-hidden lg:hidden">
+    <div className="w-full h-full overflow-hidden lg:hidden">
       {carouselArray.map((item, index) => {
         return (
           index === carouselIndex && (
