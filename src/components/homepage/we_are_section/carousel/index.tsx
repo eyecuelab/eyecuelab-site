@@ -4,21 +4,44 @@ import Precision from "./precision";
 import Vision from "./vision";
 import { useInView } from "react-intersection-observer";
 
-const carouselArray = [<Precision />, <Innovation />, <Vision />];
-
 export default function Carousel() {
   const [carouselIndex, setCarouselIndex] = useState(0);
+  const [isCarouselActive, setIsCarouselActive] = useState(false);
+  const carouselArray = [
+    <Precision
+      setIndex={(x) => {
+        setCarouselIndex(x);
+        setIsCarouselActive(false);
+      }}
+    />,
+    <Innovation
+      setIndex={(x) => {
+        setCarouselIndex(x);
+        setIsCarouselActive(false);
+      }}
+    />,
+    <Vision
+      setIndex={(x) => {
+        setCarouselIndex(x);
+        setIsCarouselActive(false);
+      }}
+    />,
+  ];
+
   const { ref, inView } = useInView();
 
   useEffect(() => {
     let interval: number;
     interval = setInterval(() => {
       if (inView) {
-        setCarouselIndex((prevIndex) => {
-          return prevIndex === carouselArray.length - 1 ? 0 : prevIndex + 1;
-        });
+        setIsCarouselActive(true);
+        if (isCarouselActive) {
+          setCarouselIndex((prevIndex) => {
+            return prevIndex === carouselArray.length - 1 ? 0 : prevIndex + 1;
+          });
+        }
       }
-    }, 3000);
+    }, 4500);
     if (!inView) clearInterval(interval);
     return () => clearInterval(interval);
   }, [inView]);
