@@ -24,7 +24,10 @@ module.exports = {
         'darker-blue': '#0257FE',
         'primary-blue': '#0076FF',
         'blue-grey': '#DBEBF2',
-        'lighter-grey': '#F5F9FB',
+        'lighter-grey': '#F5F9FB'
+      },
+      backgroundImage:{
+        'landingPage': "url('/src/assets/Video.png')",
       }
     }
     

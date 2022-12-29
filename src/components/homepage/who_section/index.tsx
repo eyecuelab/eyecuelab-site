@@ -6,15 +6,15 @@ export default function WhoIsSection() {
   return (
     <div className="absolute inset-0 bg-gradient-to-tl from-nav-light-blue to-nav-blue ">
       {/* mobile */}
-      <div className="lg:hidden w-full h-full grid grid-cols-3 grid-rows-4 z-20">
-        <div className="row-start-2 row-span-2 col-start-1 col-span-3 p-3 flex justify-start items-end">
-          <div className="h-3/4 w-[80vw] mx-auto flex flex-col justify-end">
-            <h3 className="text-white text-5xl font-semibold leading-relaxed">
+      <div className="lg:hidden h-full grid grid-cols-3 grid-rows-4 z-20">
+        <div className="w-[95vw] mx-auto row-start-2 row-span-2 col-start-1 col-span-3 flex items-end">
+          <div className="h-3/4 flex flex-col justify-end">
+            <h3 className="text-white text-6xl font-semibold leading-relaxed">
               Who Is <br />
               EyeCue Lab?
             </h3>
             <br />
-            <h3 className="text-white text-xl leading-relaxed">
+            <h3 className="text-white text-xl leading-relaxed w-[90%]">
               Our goal is to help your team activate your innovation potential, and build solutions that we're all excited about.
             </h3>
           </div>

@@ -1,6 +1,6 @@
 import { MenuAlt3Icon, XIcon } from "@heroicons/react/outline";
 import { useState } from "react";
-import logo from "../../assets/w-eyecuelogo.png"
+import logo from "../../assets/w-eyecuelogo.png";
 import hex from "../../assets/Icon.png";
 
 export default function Header() {
@@ -13,9 +13,14 @@ export default function Header() {
   return (
     <>
       {/* Mobile */}
-      <div className="min-w-full h-28 text-xl text-white whitespace-nowrap fixed inset-0 z-50 bg-transparent grid grid-cols-6 lg:hidden">
-        <div className="flex justify-center items-center">
-          <img src={logo} alt="EyeCueLab" width={57} height={57} className="pl-3" />
+      <div className="w-[95vw] mx-auto h-28 text-xl text-white whitespace-nowrap fixed inset-0 z-50 bg-transparent grid grid-cols-6 lg:hidden">
+        <div className="flex justify-start items-center">
+          <img
+            src={logo}
+            alt="EyeCueLab"
+            width={57}
+            height={57}
+          />
         </div>
         <div></div>
         <div className="col-span-2 flex items-center justify-center">
@@ -24,8 +29,11 @@ export default function Header() {
           </div>
         </div>
         <div></div>
-        <div className="flex justify-center items-center">
-          <MenuAlt3Icon className="w-10 h-10" onClick={() => handleNavToggle(nav)} />
+        <div className="flex justify-end items-center">
+          <MenuAlt3Icon
+            className="w-10 h-10"
+            onClick={() => handleNavToggle(nav)}
+          />
         </div>
       </div>
       {nav && (
@@ -33,14 +41,22 @@ export default function Header() {
           <div className="w-[95vw] mx-auto h-full">
             <div className="h-28 grid grid-cols-6 z-50">
               <div className="flex justify-start items-center">
-                <img src={logo} alt="EyeCueLab" width={57} height={57} className="pl-3" />
+                <img
+                  src={logo}
+                  alt="EyeCueLab"
+                  width={57}
+                  height={57}
+                />
               </div>
               <div className="col-span-4"></div>
-              <div className="flex justify-center items-center">
-                <XIcon className="w-10 h-10" onClick={() => handleNavToggle(nav)} />
+              <div className="flex justify-end items-center">
+                <XIcon
+                  className="w-10 h-10"
+                  onClick={() => handleNavToggle(nav)}
+                />
               </div>
             </div>
-            <div className="h-2/3 flex items-center text-2xl pl-4">
+            <div className="h-2/3 flex items-center text-2xl">
               <div className="h-3/4 w-full">
                 <div className="flex flex-col items-start justify-start ">
                   <div className="mt-14">Who We Are</div>
@@ -50,7 +66,7 @@ export default function Header() {
                 </div>
               </div>
             </div>
-            <div className="flex justify-center items-center px-4 mt-24">
+            <div className="flex justify-center items-center px-2 mt-24">
               <div className="w-full h-11 flex justify-center items-center border border-white">
                 <p>Contact Us</p>
               </div>
@@ -59,7 +75,10 @@ export default function Header() {
           <div className="absolute inset-0 h-full w-full grid grid-rows-5 -z-10">
             <div className="h-full row-start-3 row-span-3 flex justify-end items-end">
               <div className="h-full pt-10">
-                <img src={hex} alt="hex" />
+                <img
+                  src={hex}
+                  alt="hex"
+                />
               </div>
             </div>
           </div>
@@ -69,7 +88,12 @@ export default function Header() {
       {/* Desktop */}
       <div className="hidden w-full h-28 text-xl text-white whitespace-nowrap fixed inset-0 z-50 bg-transparent lg:grid grid-cols-12 gap-2">
         <div className="flex justify-center items-center">
-          <img src={logo} alt="EyeCueLab" width={57} height={57} />
+          <img
+            src={logo}
+            alt="EyeCueLab"
+            width={57}
+            height={57}
+          />
         </div>
         <div className="col-span-7 flex items-center">
           <div className="flex justify-start pl-6">
@@ -81,7 +105,7 @@ export default function Header() {
         </div>
         <div className="col-span-2 w-full"></div>
         <div className="col-span-2 flex justify-center items-center">
-          <div className="h-11 w-52 flex justify-center items-center border">
+          <div className="h-11 w-52 flex justify-center items-center border border-white">
             <p>Contact Us</p>
           </div>
         </div>
