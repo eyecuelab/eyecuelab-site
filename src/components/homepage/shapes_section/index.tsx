@@ -59,7 +59,7 @@ export default function ShapesSection() {
         </div>
       </div>
       {/* desktop */}
-      <div className="border w-full h-full grid grid-cols-2 grid-rows-2">
+      <div className="hidden w-full h-full lg:grid grid-cols-2 grid-rows-2">
         <div className="bg-[#0085FF] row-span-2 flex items-center justify-end">
           <div className="relative w-4/5 h-4/5 flex items-center mt-16">
             <div className="absolute top-14 w-full">
