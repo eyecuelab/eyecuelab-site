@@ -79,13 +79,13 @@ export default function ShapesSection() {
             </div>
           </div>
         </div>
-        <div className="bg-[#0076FF]">
-          <div className="relative h-full flex justify-start items-center w-4/5 mx-auto">
-            <div className="absolute w-full pb-12 flex justify-center items-center">
+        <div className="bg-[#0076FF] flex items-center justify-end">
+          <div className="relative h-full flex justify-start items-center w-4/5 mx-auto ">
+            <div className="absolute left-64 pb-12 w-3/5">
               <img
                 src={shape2}
                 alt="plane"
-                className="h-1/2"
+                className="h-1/2 w-52"
               />
             </div>
             <div className="ml-12 z-10 w-3/5 flex flex-col justify-start items-start">
@@ -96,11 +96,11 @@ export default function ShapesSection() {
         </div>
         <div className="bg-[#0047FB]">
           <div className="relative h-full flex justify-start items-center w-4/5 mx-auto">
-            <div className="absolute w-full pb-12 flex justify-center">
+            <div className="absolute left-52 w-4/5 pb-12">
               <img
                 src={shape3}
                 alt="shape"
-                className="h-1/2"
+                className="h-1/2 w-72"
               />
             </div>
             <div className="ml-12 z-10 w-3/5 flex flex-col justify-start items-start">
