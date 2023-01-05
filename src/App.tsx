@@ -9,7 +9,7 @@ function App() {
   return (
     <div
       style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}
-      className="w-screen h-screen overflow-x-auto snap-y snap-mandatory capitalize"
+      className="w-screen h-screen overflow-x-auto snap-y snap-normal capitalize"
     >
       {/* <Header /> */}
       <HomePage />

@@ -29,10 +29,9 @@ export default function HomePage() {
         <ClientSection />
       </RelativeFullScreen>
 
-      <RelativeFullScreen>
+      <div className={`relative top-0 min-h-[150vh] lg:min-h-full snap-start`}>
         <ShapesSection />
       </RelativeFullScreen> */}
-
       <RelativeFullScreen>
         <WhoWeHelpPage />
       </RelativeFullScreen>
