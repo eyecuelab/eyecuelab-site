@@ -1,5 +1,5 @@
 import React from "react";
-import slice from "../../../../assets/Slice 1.svg";
+import slice from "../../../../assets/Slice 1 (2).svg";
 import Rectangle from "../rectangle";
 
 interface Props {
