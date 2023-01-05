@@ -1,11 +1,12 @@
+import React from "react";
 import Button from '../../button';
 import { helpCopy } from './constants';
 
 export default function WhoWeHelpPage() {
   return (
     <div className='w-screen h-screen grid'>
-      <div className='grid text-3xl font-bold px-6 content-center'>
-        <h1>Who We Help</h1>
+      <div className='grid grid-rows-1 text-3xl items-center font-bold px-6 max-h-20'>
+        <h1 className="">Who We Help</h1>
       </div>
       <div className='grid grid-rows-2 md:grid-cols-2 md:grid-rows-1'>
         <div className='grid justify-items-center content-center bg-blue-grey'>

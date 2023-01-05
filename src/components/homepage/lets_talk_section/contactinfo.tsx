@@ -17,7 +17,7 @@ export default function ContactInfo() {
         <p className='col-span-5'>{contactEmail}</p>
       </div>
       {/* <div className='h-px bg-light-grey mb-7' /> */}
-      <div className='col-span-5 md:col-start-5'>
+      <div className='text-black/50 col-span-5 md:col-start-5'>
         Copyright 2021, EyeCue Lab
       </div>
     </div>
