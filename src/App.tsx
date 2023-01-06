@@ -2,10 +2,14 @@ import { useState } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Header from "./components/header";
 import HomePage from "./components/homepage";
+import InnovationAssessment from "./components/quiz";
 import "./styles/App.css";
 
 function App() {
-  const router = createBrowserRouter([{ path: "/", element: <HomePage /> }]);
+  const router = createBrowserRouter([
+    { path: "/", element: <HomePage /> },
+    { path: "/InnovationAssessment", element: <InnovationAssessment /> },
+  ]);
 
   return (
     <div

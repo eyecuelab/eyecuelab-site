@@ -116,7 +116,7 @@ export default function Header() {
             {navItems?.map((item) => {
               return (
                 <div className="mr-10">
-                  <a href={`#${item.link}`}>{item.name}</a>
+                  <a href={`${item.link}`}>{item.name}</a>
                 </div>
               );
             })}
