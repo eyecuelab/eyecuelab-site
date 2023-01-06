@@ -3,25 +3,33 @@ import { useState } from "react";
 import logo from "../../assets/w-eyecuelogo.png";
 import hex from "../../assets/Icon.png";
 
+const navItems = [
+  { name: "Who We Are", link: "Who" },
+  { name: "Case Studies", link: "CaseStudies" },
+  { name: "What We Do", link: "What" },
+  { name: "Innovation Assessment", link: "InnovationAssessment" },
+];
+
 export default function Header() {
   const [nav, setNav] = useState(false);
 
   function handleNavToggle(nav: boolean) {
     setNav(!nav);
   }
-  console.log(nav);
 
   return (
     <>
       {/* Mobile */}
       <div className="w-[95vw] mx-auto h-28 text-xl text-white whitespace-nowrap fixed inset-0 z-50 bg-transparent grid grid-cols-6 lg:hidden">
         <div className="flex justify-start items-center">
-          <img
-            src={logo}
-            alt="EyeCueLab"
-            width={57}
-            height={57}
-          />
+          <a href="/">
+            <img
+              src={logo}
+              alt="EyeCueLab"
+              width={57}
+              height={57}
+            />
+          </a>
         </div>
         <div></div>
         <div className="col-span-2 flex items-center justify-center">
@@ -42,12 +50,14 @@ export default function Header() {
           <div className="w-[95vw] mx-auto h-full">
             <div className="h-28 grid grid-cols-6 z-50">
               <div className="flex justify-start items-center">
-                <img
-                  src={logo}
-                  alt="EyeCueLab"
-                  width={57}
-                  height={57}
-                />
+                <a href="/">
+                  <img
+                    src={logo}
+                    alt="EyeCueLab"
+                    width={57}
+                    height={57}
+                  />
+                </a>
               </div>
               <div className="col-span-4"></div>
               <div className="flex justify-end items-center">
@@ -60,10 +70,13 @@ export default function Header() {
             <div className="h-2/3 flex items-center text-2xl">
               <div className="h-3/4 w-full">
                 <div className="flex flex-col items-start justify-start ">
-                  <div className="mt-14">Who We Are</div>
-                  <div className="mt-14">Case Studies</div>
-                  <div className="mt-14">What We Do</div>
-                  <div className="mt-14">Innovation Assessment</div>
+                  {navItems?.map((item) => {
+                    return (
+                      <div className="mt-14">
+                        <a href={`#${item.link}`}>{item.name}</a>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -89,19 +102,24 @@ export default function Header() {
       {/* Desktop */}
       <div className="hidden w-full h-28 text-xl text-white whitespace-nowrap fixed inset-0 z-50 bg-transparent lg:grid grid-cols-12 gap-2">
         <div className="flex justify-center items-center">
-          <img
-            src={logo}
-            alt="EyeCueLab"
-            width={57}
-            height={57}
-          />
+          <a href="/">
+            <img
+              src={logo}
+              alt="EyeCueLab"
+              width={57}
+              height={57}
+            />
+          </a>
         </div>
         <div className="col-span-7 flex items-center">
           <div className="flex justify-start pl-6">
-            <div className="mr-8">Who We Are</div>
-            <div className="mr-8">Case Studies</div>
-            <div className="mr-8">What We Do</div>
-            <div className="mr-8">Innovation Assessment</div>
+            {navItems?.map((item) => {
+              return (
+                <div className="mr-10">
+                  <a href={`#${item.link}`}>{item.name}</a>
+                </div>
+              );
+            })}
           </div>
         </div>
         <div className="col-span-2 w-full"></div>
