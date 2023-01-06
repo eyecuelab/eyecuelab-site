@@ -12,7 +12,7 @@ export default function ShapesSection() {
             <img
               src={shape1}
               alt="plane"
-              className="w-2/3 h-2/3 object-contain absolute bottom-0"
+              className="w-2/3 h-2/3 object-contain absolute -bottom-2"
             />
           </div>
           <div className="w-[95vw] mx-auto">
@@ -47,13 +47,13 @@ export default function ShapesSection() {
             <img
               src={shape3}
               alt="plane"
-              className="w-4/5 h-4/5 absolute bottom-0"
+              className="w-full h-full absolute -bottom-2"
             />
           </div>
           <div className="w-[95vw] mx-auto">
-            <div className="flex flex-col justify-start w-4/5 pb-3">
+            <div className="flex flex-col justify-start pb-3">
               <h1 className="text-3xl font-semibold leading-relaxed">Create New Innovative Products</h1>
-              <p className="mt-4">Shake up your industry by developing + launching your next big product with our team of innovation experts.</p>
+              <p className="mt-4 w-4/5">Shake up your industry by developing + launching your next big product with our team of innovation experts.</p>
             </div>
           </div>
         </div>
@@ -69,7 +69,7 @@ export default function ShapesSection() {
                 className="w-96"
               />
             </div>
-            <div className="flex flex-col justify-center w-2/3 h-full">
+            <div className="flex flex-col justify-center w-2/3 h-full mt-20">
               <h1 className="text-4xl font-semibold leading-relaxed w-72">
                 Launch
                 <br />
@@ -80,8 +80,8 @@ export default function ShapesSection() {
           </div>
         </div>
         <div className="bg-[#0076FF] flex items-center justify-end">
-          <div className="relative h-full flex justify-start items-center w-4/5 mx-auto ">
-            <div className="absolute left-64 pb-12 w-3/5">
+          <div className="relative h-full flex justify-start items-center w-4/5 mx-auto">
+            <div className="absolute -right-12 pb-12 w-3/5">
               <img
                 src={shape2}
                 alt="plane"
@@ -96,7 +96,7 @@ export default function ShapesSection() {
         </div>
         <div className="bg-[#0047FB]">
           <div className="relative h-full flex justify-start items-center w-4/5 mx-auto">
-            <div className="absolute left-52 w-4/5 pb-12">
+            <div className="absolute right-0 w-3/5 pb-12">
               <img
                 src={shape3}
                 alt="shape"
