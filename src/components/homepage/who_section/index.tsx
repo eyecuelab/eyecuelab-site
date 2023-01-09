@@ -8,7 +8,7 @@ export default function WhoIsSection() {
       {/* mobile */}
       <div className="lg:hidden h-full grid grid-cols-3 grid-rows-4 z-20">
         <div className="w-[95vw] mx-auto row-start-2 row-span-2 col-start-1 col-span-3 flex items-end">
-          <div className="h-3/4 flex flex-col justify-end">
+          <div className="w-96 h-3/4 flex flex-col justify-end">
             <h3 className="text-white text-6xl font-semibold leading-relaxed">
               Who Is <br />
               EyeCue Lab?
@@ -29,30 +29,38 @@ export default function WhoIsSection() {
       <div className="lg:hidden absolute inset-0 w-full h-full grid grid-cols-4">
         <div className="col-start-2 col-span-3 flex items-center justify-end">
           <div className="w-full flex justify-end">
-            <img src={hex2} alt="hex" className="" />
+            <img
+              src={hex2}
+              alt="hex"
+              className=""
+            />
           </div>
         </div>
       </div>
       {/* desktop */}
       <div className="w-[80vw] mx-auto h-full flex items-center">
-        <div className="hidden lg:grid grid-cols-3 grid-rows-3">
-          <div className="row-start-2 col-start-1 flex justify-start items-center">
-            <h3 className="text-white text-7xl font-semibold">
+        <div className="w-full h-3/4 flex items-center">
+          <div className="w-2/5">
+            <h2 className=" text-white text-6xl font-semibold">
               Who Is <br />
               EyeCue Lab?
-            </h3>
+            </h2>
           </div>
-          <div className="row-start-2 col-start-2 col-span-2 flex justify-start items-center">
-            <h3 className="w-4/5 text-white text-3xl leading-relaxed p-16 ml-14">
+          <div className="w-3/5">
+            <h2 className="text-white text-3xl leading-relaxed">
               Our goal is to help your team activate your innovation potential, and build solutions that we're all excited about.
-            </h3>
+            </h2>
           </div>
         </div>
 
-        <div className="hidden lg:grid grid-cols-3 grid-rows-3 absolute inset-0 ">
+        <div className="hidden lg:grid grid-cols-3 grid-rows-3 absolute inset-0">
           <div className="row-start-1 row-span-3 col-start-2 col-span-2 absolute h-full w-full flex justify-end items-end pt-4">
             <div className="w-3/4 h-4/5 p-0 flex items-end">
-              <img src={hex1} alt="hex" className="" />
+              <img
+                src={hex1}
+                alt="hex"
+                className=""
+              />
             </div>
           </div>
         </div>

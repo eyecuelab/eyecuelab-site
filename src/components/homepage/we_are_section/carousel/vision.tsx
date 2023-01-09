@@ -1,5 +1,5 @@
 import React from "react";
-import slice from "../../../../assets/Slice 1.svg";
+import slice from "../../../../assets/Slice 3 (2).svg";
 import Rectangle from "../rectangle";
 interface Props {
   setIndex: (index: number) => void;
