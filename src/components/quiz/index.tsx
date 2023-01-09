@@ -7,7 +7,6 @@ export default function InnovationAssessment() {
   const [innovationQuizData, innovationQuizQuestions] = useInnovationQuizData();
   const [questionIndex, setQuestionIndex] = useState(0);
   console.log(innovationQuizQuestions);
-  useEffect(() => {});
 
   return (
     <>
@@ -25,7 +24,7 @@ export default function InnovationAssessment() {
           </div>
         </div>
         <div className="bg-white w-full">
-          <div className="w-[95vw] h-full mx-auto pt-24 block">
+          <div className="w-[95vw] h-full mx-auto pt-36 block">
             <p className="font-extralight text-slate-400 normal-case">Step {`${questionIndex + 1}`} of 12</p>
             <div className="border h-1 bg-slate-300 mt-2 rounded-sm relative">
               <span className={`absolute left-0 h-full ${questionIndex === 11 ? "w-full" : `w-${questionIndex + 1}/12`} bg-blue-500`} />
