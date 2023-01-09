@@ -1,7 +1,14 @@
 import { CheckCircleIcon, ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/outline";
+import { useEffect, useState } from "react";
 import illustrationQuiz from "../../assets/Illsutration_Quiz.svg";
+import useInnovationQuizData from "./useInnovationQuizData";
 
 export default function InnovationAssessment() {
+  const [innovationQuizData, innovationQuizQuestions] = useInnovationQuizData();
+  const [questionIndex, setQuestionIndex] = useState(0);
+  console.log(innovationQuizQuestions);
+  useEffect(() => {});
+
   return (
     <>
       <div className="w-full h-full">
@@ -17,33 +24,54 @@ export default function InnovationAssessment() {
             <h3 className="leading-relaxed w-1/2">Innovation Assessment</h3>
           </div>
         </div>
-        <div className="bg-white w-full h-full">
-          <div className="w-[95vw] h-full mx-auto pt-20 block">
-            <p className="font-extralight text-slate-400 normal-case">Step {`${`1`}`} of 12</p>
+        <div className="bg-white w-full">
+          <div className="w-[95vw] h-full mx-auto pt-24 block">
+            <p className="font-extralight text-slate-400 normal-case">Step {`${questionIndex + 1}`} of 12</p>
             <div className="border h-1 bg-slate-300 mt-2 rounded-sm relative">
-              <span className={`absolute left-0 w-1/12 h-full bg-blue-500`}></span>
+              <span className={`absolute left-0 h-full ${questionIndex === 11 ? "w-full" : `w-${questionIndex + 1}/12`} bg-blue-500`} />
             </div>
             <div className="mt-4 grid grid-rows-6 gap-5">
-              <div className="py-2 h-24">Question</div>
-              <div className="border border-blue-200 py-4 h-24 flex justify-start items-center">
-                <CheckCircleIcon className="w-12 text-blue-200 ml-2" />
-              </div>
-              <div className="border border-blue-200 py-4 h-24 flex justify-start items-center">
-                <CheckCircleIcon className="w-12 text-blue-200 ml-2" />
-              </div>
-              <div className="border border-blue-200 py-4 h-24 flex justify-start items-center">
-                <CheckCircleIcon className="w-12 text-blue-200 ml-2" />
-              </div>
-              <div className="border border-blue-200 py-4 h-24 flex justify-start items-center">
-                <CheckCircleIcon className="w-12 text-blue-200 ml-2" />
-              </div>
+              {innovationQuizQuestions?.map((q, i) => {
+                if (i === questionIndex) {
+                  return (
+                    <>
+                      <div className="py-2 h-24 flex items-center">{q.text}</div>
+                      {q.answers.map((a, i) => {
+                        return (
+                          <>
+                            <div className="border border-blue-200 hover:border-blue-500 py-4 h-24 flex justify-start items-center">
+                              <CheckCircleIcon className="w-12 text-blue-200 mx-2" />
+                              <p className="text-sm">{a.text}</p>
+                            </div>
+                          </>
+                        );
+                      })}
+                    </>
+                  );
+                }
+              })}
               <div className="h-24 flex justify-start items-center">
-                <div className="flex justify-center items-center w-1/5 h-3/5 mr-4 text-slate-300 hover:text-blue-500 border hover:border-blue-500">
+                <button
+                  className="flex justify-center items-center w-1/5 h-3/5 mr-4 text-slate-300 active:text-blue-500 border active:border-blue-500"
+                  onClick={() => {
+                    setQuestionIndex((prev) => {
+                      return prev === 0 ? 0 : prev - 1;
+                    });
+                  }}
+                >
                   <ChevronLeftIcon className="w-10" />
-                </div>
-                <div className="w-4/5 h-3/5 py-2 flex justify-center items-center border hover:border-blue-500 text-slate-300 hover:text-blue-500">
-                  <p className="font-bold text-xl mr-4">Next</p> <ChevronRightIcon className="w-10" />
-                </div>
+                </button>
+                <button
+                  className="w-4/5 h-3/5 py-2 flex justify-center items-center border active:border-blue-500 text-slate-300 active:text-blue-500"
+                  onClick={() => {
+                    setQuestionIndex((prev) => {
+                      return prev === 11 ? 11 : prev + 1;
+                    });
+                    if (questionIndex === 11) console.log("submit");
+                  }}
+                >
+                  <p className="font-bold text-xl mr-4">{questionIndex === 11 ? "Submit" : "Next"}</p> <ChevronRightIcon className="w-10" />
+                </button>
               </div>
             </div>
           </div>
