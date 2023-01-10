@@ -50,7 +50,7 @@ export default function InnovationAssessment() {
                       <div className="py-2 h-24 flex items-center lg:w-1/2 lg:text-2xl lg:my-4 lg:col-span-2">{q.text}</div>
                       {q.answers.map((a, i) => {
                         return (
-                          <div className="flex items-center h-24">
+                          <div className="flex items-center h-full">
                             <div className="border border-blue-200 hover:border-blue-500 py-4 h-full w-full flex justify-start items-center">
                               <CheckCircleIcon className="w-12 text-blue-200 mx-2" />
                               <p className="text-base">{a.text}</p>
