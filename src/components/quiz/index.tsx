@@ -5,10 +5,29 @@ import useInnovationQuizData from "./useInnovationQuizData";
 /*
  //TODO: SUBMIT and multiselect answers
 */
+const progressBarWidth = ["w-1/12", "w-2/12", "w-3/12", "w-4/12", "w-5/12", "w-6/12", "w-7/12", "w-8/12", "w-9/12", "w-10/12", "w-11/12"];
 export default function InnovationAssessment() {
   const [innovationQuizData, innovationQuizQuestions] = useInnovationQuizData();
   const [questionIndex, setQuestionIndex] = useState(0);
   let isGreaterThan4 = false;
+  let progressBar = progressBarWidth[questionIndex];
+
+  console.log(progressBar);
+  function updatePrevQuestionIndex(x: number) {
+    if (x === 0) {
+      setQuestionIndex(0);
+      return;
+    }
+    setQuestionIndex(x - 1);
+  }
+  function updateNextQuestionIndex(x: number) {
+    if (x === 11) {
+      console.log("Submit");
+      setQuestionIndex(11);
+      return;
+    }
+    setQuestionIndex(x + 1);
+  }
 
   return (
     <>
@@ -27,7 +46,7 @@ export default function InnovationAssessment() {
               <div className="w-4/5 mx-auto flex flex-col justify-center">
                 <p className="font-extralight text-slate-400 normal-case pb-4">Step {`${questionIndex + 1}`} of 12</p>
                 <div className="h-1 bg-slate-300 rounded-sm relative">
-                  <span className={`absolute left-0 h-full ${questionIndex === 11 ? "w-full" : `w-${questionIndex + 1}/12`} bg-blue-500`} />
+                  <span className={`absolute left-0 h-full bg-blue-500 ${questionIndex === 11 ? "w-full" : `${progressBar}`} `} />
                 </div>
               </div>
             </div>
@@ -38,7 +57,7 @@ export default function InnovationAssessment() {
             <div className="h-14 lg:hidden flex flex-col justify-center pt-2">
               <p className="font-extralight text-slate-400 normal-case pb-4">Step {`${questionIndex + 1}`} of 12</p>
               <div className="h-1 bg-slate-300 rounded-sm relative">
-                <span className={`absolute left-0 h-full ${questionIndex === 11 ? "w-full" : `w-${questionIndex + 1}/12`} bg-blue-500`} />
+                <span className={`absolute left-0 h-full ${questionIndex === 11 ? "w-full" : `${progressBar}`} bg-blue-500`} />
               </div>
             </div>
             <div className="grid grid-rows-6 gap-5 lg:grid-cols-2 lg:grid-rows-5 lg:gap-3">
@@ -65,21 +84,16 @@ export default function InnovationAssessment() {
               <div className={`h-24 flex justify-start items-center ${isGreaterThan4 ? "lg:row-start-5" : "lg:row-start-4"}`}>
                 <button
                   className="flex justify-center items-center w-1/5 h-3/5 mr-4 text-slate-300 active:text-blue-500 border active:border-blue-500"
-                  onClick={() => {
-                    setQuestionIndex((prev) => {
-                      return prev === 0 ? 0 : prev - 1;
-                    });
+                  onClick={(x) => {
+                    updatePrevQuestionIndex(questionIndex);
                   }}
                 >
                   <ChevronLeftIcon className="w-10" />
                 </button>
                 <button
                   className="w-4/5 h-3/5 py-2 flex justify-center items-center border active:border-blue-500 text-slate-300 active:text-blue-500"
-                  onClick={() => {
-                    setQuestionIndex((prev) => {
-                      return prev === 11 ? 11 : prev + 1;
-                    });
-                    if (questionIndex === 11) console.log("submit");
+                  onClick={(x) => {
+                    updateNextQuestionIndex(questionIndex);
                   }}
                 >
                   <p className="font-bold text-xl mr-4">{questionIndex === 11 ? "Submit" : "Next"}</p> <ChevronRightIcon className="w-10" />
