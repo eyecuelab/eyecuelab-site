@@ -2,7 +2,9 @@ import { CheckCircleIcon, ChevronLeftIcon, ChevronRightIcon } from "@heroicons/r
 import { useEffect, useState } from "react";
 import illustrationQuiz from "../../assets/Illsutration_Quiz.svg";
 import useInnovationQuizData from "./useInnovationQuizData";
-
+/*
+ //TODO: SUBMIT and multiselect answers
+*/
 export default function InnovationAssessment() {
   const [innovationQuizData, innovationQuizQuestions] = useInnovationQuizData();
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -32,7 +34,7 @@ export default function InnovationAssessment() {
             </div>
           </div>
         </div>
-        <div className="bg-white w-full">
+        <div className="bg-white w-full h-full">
           <div className="w-[95vw] lg:w-[80vw] h-full mx-auto block">
             <div className="h-14 lg:hidden flex flex-col justify-center pt-2">
               <p className="font-extralight text-slate-400 normal-case pb-4">Step {`${questionIndex + 1}`} of 12</p>
