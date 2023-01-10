@@ -9,7 +9,6 @@ export default function InnovationAssessment() {
   const [innovationQuizData, innovationQuizQuestions] = useInnovationQuizData();
   const [questionIndex, setQuestionIndex] = useState(0);
   let isGreaterThan4 = false;
-  console.log(innovationQuizQuestions);
 
   return (
     <>
@@ -23,7 +22,7 @@ export default function InnovationAssessment() {
             />
           </div>
           <div className="w-[95vw] lg:w-[80vw] mx-auto h-full flex items-end lg:items-center pb-10 lg:pb-0 font-semibold">
-            <h3 className="leading-relaxed w-1/2 lg:w-1/4 text-white text-3xl lg:text-4xl lg:py-4">Innovation Assessment</h3>
+            <h3 className="leading-relaxed w-1/2 lg:w-[23rem] text-white text-3xl lg:text-4xl lg:py-4">Innovation Assessment</h3>
             <div className="hidden lg:flex bg-white absolute w-3/5 h-1/4 right-0 bottom-0 z-10">
               <div className="w-4/5 mx-auto flex flex-col justify-center">
                 <p className="font-extralight text-slate-400 normal-case pb-4">Step {`${questionIndex + 1}`} of 12</p>
@@ -54,7 +53,7 @@ export default function InnovationAssessment() {
                           <div className="flex items-center h-24">
                             <div className="border border-blue-200 hover:border-blue-500 py-4 h-full w-full flex justify-start items-center">
                               <CheckCircleIcon className="w-12 text-blue-200 mx-2" />
-                              <p className="text-sm">{a.text}</p>
+                              <p className="text-base">{a.text}</p>
                             </div>
                           </div>
                         );
